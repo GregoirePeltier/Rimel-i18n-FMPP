@@ -1,5 +1,5 @@
 # I18N - Rimel - 2020
-_Outils et documents de Francois Margueretaz Peltier Pilone pour le projet I18N RIMEL 2020 a polytech_
+_Outils et documents de Francois Marguerettaz Peltier Pillone pour le projet I18N RIMEL 2020 a polytech_
 
 ## Outils
 ### Installation
