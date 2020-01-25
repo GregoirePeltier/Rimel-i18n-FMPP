@@ -3,5 +3,5 @@ _Outils et documents de Francois Marguerettaz Peltier Pillone pour le projet I18
 
 ## Outils
 ### Installation
-Pour utiliser les outils python, il est nécéssaire d'en installé les dépendance 
+Pour utiliser les outils python, il est nécessaire d'en installer les dépendances. 
 `pip install -r requirements.txt` a la racine du projet devrais vous permettre par la suite de faire tourner les scripts correctement
