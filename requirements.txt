@@ -4,10 +4,14 @@ cffi==1.13.2
 constantly==15.1.0
 cryptography==2.8
 cssselect==1.1.0
+cycler==0.10.0
 hyperlink==19.0.0
 idna==2.8
 incremental==17.5.0
+kiwisolver==1.1.0
 lxml==4.4.2
+matplotlib==3.1.2
+numpy==1.18.1
 parsel==1.5.2
 Protego==0.1.16
 pyasn1==0.4.8
@@ -16,6 +20,8 @@ pycparser==2.19
 PyDispatcher==2.0.5
 PyHamcrest==2.0.0
 pyOpenSSL==19.1.0
+pyparsing==2.4.6
+python-dateutil==2.8.1
 queuelib==1.5.0
 Scrapy==1.8.0
 service-identity==18.1.0
