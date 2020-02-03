@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 
 f = open("output/output.txt", "r")
 
-data = {}
+data = {};
 for line in f:
 	commitValues = (line[(line.rfind('='))+1:]).replace(" ","");
 	name = (line[:(line.rfind('='))]).replace(" ","");
@@ -13,12 +13,14 @@ for line in f:
 	if(commitLoc != 0 and commit != 0):
 		sub = (commitLoc/commit)*100;
 		data[name] = sub;
-
-
 f.close();
 
 names = list(data.keys())
 values = list(data.values())
 
+plt.title("Pourcentage de commits liés à la localisation par projet");
+plt.xlabel('Projets Java');
+plt.xticks([]);
+plt.ylabel('Pourcentage des commits liés à i10n');
 plt.bar(names, values);
 plt.show();
