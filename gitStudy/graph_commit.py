@@ -20,7 +20,7 @@ values = list(data.values())
 
 plt.title("Pourcentage de commits liés à la localisation par projet");
 plt.xlabel('Projets Java');
-plt.xticks([]);
+plt.xticks(rotation='vertical');
 plt.ylabel('Pourcentage des commits liés à i10n');
 plt.bar(names, values);
 plt.show();
