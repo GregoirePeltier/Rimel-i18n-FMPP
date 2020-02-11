@@ -1,6 +1,8 @@
 # Source https://gist.github.com/simonw/091b765a071d1558464371042db3b959
 # Modified by prune.pillone@etu.unice.fr
 
+## peut etre unterressant de voir qui commit
+
 import subprocess
 import re
 import os
@@ -32,8 +34,7 @@ def run():
                 found = 0
                 for word in keywords:
                     if found == 0 and (word in commit['message'] or word in commit['title']):
-                        # Pour récupérer le nombre de fichiers impactés par commit
-                        # get_Files(commit, outputFile)
+                        get_Files(commit, outputFile)
                         totalLoc += 1
                         found = 1
             outputFile.write(getName() + " = " + str(totalLoc) + "/" + str(total) + "\n")
@@ -86,7 +87,7 @@ def get_Files(commit, outputFile):
         ['git', 'diff-tree', '--no-commit-id', '--name-only', '-r', commit['hash']], stderr=subprocess.STDOUT).split(
         '\n')
     for file in files:
-        # print(file)
+        print(file)
         number += 1
     outputFile.write(commit['hash'] + " = " + str(number) + "\n")
 

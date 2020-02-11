@@ -19,7 +19,7 @@ def getName():
 
 
 def run():
-    outputFile = open("./output/outputBranches2.txt", 'w')
+    outputFile = open("./output/outputBranches.txt", 'w')
     for f in os.walk("../Projects"):
         for folder in f[1]:
             try:
