@@ -70,41 +70,53 @@ Préciser vos zones de recherches en fonction de votre projet,
 1. les articles ou documents utiles à votre projet
 2. les outils
  
-## IV. Hypothesis & Experiences
+## IV. Méthodologie
 
-1. Il s'agit ici d'énoncer sous forme d' hypothèses ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer facilement._ Bien sûr, votre hypothèse devrait être construite de manière à v_ous aider à répondre à votre question initiale_.Explicitez ces différents points.
-2. Test de l’hypothèse par l’expérimentation. 1. Vos tests d’expérimentations permettent de vérifier si vos hypothèses sont vraies ou fausses. 2. Il est possible que vous deviez répéter vos expérimentations pour vous assurer que les premiers résultats ne sont pas seulement un accident.
-3. Explicitez bien les outils utilisés et comment.
-4. Justifiez vos choix
+Pour cette expérience, nous avons d'abord récupéré des projets java depuis la source Weblate avec un script python [script.1]. Puis nous avons effectué des analyses sur ces projets. Tous les outils utilisés pour effectuer les analyses sont des scripts python que nous avons développé.
+
+Nous avons choisi d'effectuer deux types d'analyses. 
+
+La première concernant la structure d'un projet :
+	- Rechercher les .properties liés à la localisation dans les projets java [script.2]
+		- Voir leur localisation s'ils sont dans des packages séparés ou non
+	- Voir la quantité de fichiers.properties par rapport au reste des fichiers java
+	Trouver la localisation des .properties nous permettra de déterminer s'il la i10n a un impact sur l'architecture des projets. 
+
+	- Rechercher les marqueurs de traduction dans les fichiers Java/Jsp. [script.3]
+	Cette information permettra de voir la quantité de fichiers Java/JSP impactés par la i10n.
+
+Lors de la première itération, nous avons remarqué qu'une majorité des projets weblate java étaient en fait des projets Android. Les projets Android ont une gestion de la traduction particulière qui demande d'adapter notre première étape. Même si les fichiers sont différents, le but reste le même pour chaque étape voir l'influence sur l'architecture et le nombre de fichiers Java impactés.
+	- Rechercher répertoires "values" liées à la localisation dans les projets Android [script.4]
+		- Voir la quantité de fichiers xml dans les répertoires "value" par rapport au reste des fichiers java
+	- Rechercher les marqueurs de traduction dans les fichiers java, pour voir le nombre fichiers Java touchés par la traduction [script.3]
+
+
+La deuxième analyse concernant la gestion de version avec : 
+	- Parcourir les commits pour trouver ceux qui sont liés à la i10n grâce à des mots clef (localisation, translation etc) [script.5]
+	- Voir le nombre de fichiers impactés lors des commits liés à la localisation
+	Cette analyse permettra de savoir combien de commits sont liés à la localisation, et de voir quelle proportion prends la localisation sur le développement d'une application 
+
+	- Parcourir les branches pour déterminer si une branche est spécifique à la traduction [script.6]
+	Ces résultats montreront si une branche est spécifique à la gestion d'i10n ou non.
+
+	- Répartition des auteurs pour les commits de traduction. [script.7]
+	Cela permettra de savoir si les commits sont majoritairement de weblate ou de développeur. Et savoir le nombre de développeurs qui s'occupe de la traduction.
+
+Toutes ces informations nous permettront d'avoir des métriques simples pour répondre à notre question "Quel est l'impact des techniques de mise en œuvre de la localisation sur les projets informatiques". 
+
+Afin d'avoir une donnée globale nous avons analyser les 1000 projets java les mieux notés sur github pour avoir une estimation du nombre de projets faisant de la traduction (tous outils confondus).
+
+
+
 
 ## V. Result Analysis and Conclusion
 
 1. Analyse des résultats & construction d’une conclusion : Une fois votre expérience terminée, vous récupérez vos mesures et vous les analysez pour voir si votre hypothèse tient la route. 
 
 ## VI. Tools \(facultatif\)
-1.Récupération de projet java depuis la source Weblate avec un script python
-2. Checkout de ces projets afin de visualiser comment est gérée la traduction dans ces projets à l’aide d’un script python
-    a. Recherche les .properties (toujours avec le script python)
-      - Voir leur localisation (dans des package séparés, tous regroupés)
-      - La quantité de fichiers présents
-    b. Rechercher les marqueurs de traduction dans les fichiers java, pour voir le nombre de fichiers touchés
-3. Parcourir les commits pour trouver ceux qui sont liés aux fichiers de .properties avec un script python
-    a. Déterminer le nombre de commit pour ces fichiers
-    b. Le nombre de fichiers qui sont aussi modifiés lors de ce commit
-
-L’impact de la localisation pourra être mesuré par 
-
-1. La localisation des .properties, est-ce que cela a influencé l’architecture d’un projet
-2. Le nombre de marqueurs de traductions trouvés dans les fichiers java 
-    a. Ainsi que la vitesse à laquel ses marqueurs ont été ajouté à un fichier (est-ce qu’ils sont ajoutés à la création du fichier ou plus tard)
-3. Le nombre de commit affectés à la localisation, cela nous permettra de voir combien de commit sont liés à la localisation ou non, et donc de voir quel proportion la localisation prend sur le développement d’une application.
-    a. Hypothèse = un commit lié à localisation est un commit qui contient dans son message de commit 
-    "localization" ou "l10n" ou "i18n" ou "internationalization" ou "translate" ou "translation" ou "weblate"
-4. Le nombre de lignes/fichiers affectés à un commit lié à la localisation
-
-Ces informations nous permettront de faire un état des lieux et d’avoir des métriques simples pour commencer à répondre à notre question  “Quel est l’impact des techniques de mise en oeuvre de la localisation sur les projets informatique ?”. Selon les résultats, nous pourrons ensuite aviser pour prendre compte un autre langage ou une autre source de récupération de projets.
-
-Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expériementations, \(2\) partager/expliquer à d'autres l'usage des outils.
+Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à 
+\(1\) pouvoir reproduire vos expériementations, 
+\(2\) partager/expliquer à d'autres l'usage des outils.
 
 ## VI. Menaces à la validité des résultats
 
