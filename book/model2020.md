@@ -77,36 +77,31 @@ Pour cette expérience, nous avons d'abord récupéré des projets java depuis l
 Nous avons choisi d'effectuer deux types d'analyses. 
 
 La première concernant la structure d'un projet :
-	- Rechercher les .properties liés à la localisation dans les projets java [script.2]
-		- Voir leur localisation s'ils sont dans des packages séparés ou non
-	- Voir la quantité de fichiers.properties par rapport au reste des fichiers java
-	Trouver la localisation des .properties nous permettra de déterminer s'il la i10n a un impact sur l'architecture des projets. 
+- Rechercher les .properties liés à la localisation dans les projets java [script.2]. Trouver la localisation des .properties nous permettra de déterminer s'il la i10n a un impact sur l'architecture des projets. 
+    - Voir leur localisation s'ils sont dans des packages séparés ou non
+    - Voir la quantité de fichiers.properties par rapport au reste des fichiers java
 
-	- Rechercher les marqueurs de traduction dans les fichiers Java/Jsp. [script.3]
-	Cette information permettra de voir la quantité de fichiers Java/JSP impactés par la i10n.
+- Rechercher les marqueurs de traduction dans les fichiers Java/Jsp. [script.3]. Cette information permettra de voir la quantité de fichiers Java/JSP impactés par la i10n.
 
 Lors de la première itération, nous avons remarqué qu'une majorité des projets weblate java étaient en fait des projets Android. Les projets Android ont une gestion de la traduction particulière qui demande d'adapter notre première étape. Même si les fichiers sont différents, le but reste le même pour chaque étape voir l'influence sur l'architecture et le nombre de fichiers Java impactés.
-	- Rechercher répertoires "values" liées à la localisation dans les projets Android [script.4]
-		- Voir la quantité de fichiers xml dans les répertoires "value" par rapport au reste des fichiers java
-	- Rechercher les marqueurs de traduction dans les fichiers java, pour voir le nombre fichiers Java touchés par la traduction [script.3]
+
+- Rechercher répertoires "values" liées à la localisation dans les projets Android [script.4]
+    - Voir la quantité de fichiers xml dans les répertoires "value" par rapport au reste des fichiers java
+    
+- Rechercher les marqueurs de traduction dans les fichiers java, pour voir le nombre fichiers Java touchés par la traduction [script.3]
 
 
 La deuxième analyse concernant la gestion de version avec : 
-	- Parcourir les commits pour trouver ceux qui sont liés à la i10n grâce à des mots clef (localisation, translation etc) [script.5]
-	- Voir le nombre de fichiers impactés lors des commits liés à la localisation
-	Cette analyse permettra de savoir combien de commits sont liés à la localisation, et de voir quelle proportion prends la localisation sur le développement d'une application 
+- Parcourir les commits pour trouver ceux qui sont liés à la i10n grâce à des mots clef (localisation, translation etc) [script.5]
+- Voir le nombre de fichiers impactés lors des commits liés à la localisation. Cette analyse permettra de savoir combien de commits sont liés à la localisation, et de voir quelle proportion prends la localisation sur le développement d'une application 
 
-	- Parcourir les branches pour déterminer si une branche est spécifique à la traduction [script.6]
-	Ces résultats montreront si une branche est spécifique à la gestion d'i10n ou non.
+- Parcourir les branches pour déterminer si une branche est spécifique à la traduction [script.6]. Ces résultats montreront si une branche est spécifique à la gestion d'i10n ou non.
 
-	- Répartition des auteurs pour les commits de traduction. [script.7]
-	Cela permettra de savoir si les commits sont majoritairement de weblate ou de développeur. Et savoir le nombre de développeurs qui s'occupe de la traduction.
+- Répartition des auteurs pour les commits de traduction. [script.7]. Cela permettra de savoir si les commits sont majoritairement de weblate ou de développeur. Et savoir le nombre de développeurs qui s'occupe de la traduction.
 
 Toutes ces informations nous permettront d'avoir des métriques simples pour répondre à notre question "Quel est l'impact des techniques de mise en œuvre de la localisation sur les projets informatiques". 
 
 Afin d'avoir une donnée globale nous avons analyser les 1000 projets java les mieux notés sur github pour avoir une estimation du nombre de projets faisant de la traduction (tous outils confondus).
-
-
 
 
 ## V. Result Analysis and Conclusion
