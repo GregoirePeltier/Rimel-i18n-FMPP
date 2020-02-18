@@ -1,5 +1,6 @@
 import json
 from collections import Counter
+from matplotlib import pyplot as plt
 
 from path import Path
 import re
@@ -12,6 +13,8 @@ patternForUnity = re.compile("msg\\.getMessage")
 patternForAndroidReference = re.compile("getString\\(R\\.string\\.")
 patternForFreePlane = re.compile("TextUtils\\.getText")
 patternForRouteConverter = re.compile("(getBundle\\(\\)|bundle)\\.getString")
+
+data = {}
 
 androidProjects = [
 	"../Projects/andors-trail",
@@ -63,6 +66,7 @@ androidProjects = [
 keyInFile = {}
 totalNbFile = 0
 totalNbFileWithKey = 0
+totalNbOccurrence = 0
 javaFileNb = 0
 cnt = Counter()
 for f in Path('../Projects/unity').walkfiles():
@@ -79,11 +83,16 @@ keyInFile['../Projects/unity'] = {
 	"totalNbFile": javaFileNb,
 	"listOfFileWithKey": cnt.copy(),
 	"totalNbFileWithKey": len(cnt),
-	"average": (len(cnt) / javaFileNb) * 100
+	"average": (len(cnt) / javaFileNb) * 100,
+	"totalNbOccurrence": sum(cnt.values()),
+	# "averageOccurrencePerFile": (len(cnt) / sum(cnt.values())) * 100
 }
+data["unity"] = keyInFile['../Projects/unity']["average"]
+
 
 totalNbFile += javaFileNb
 totalNbFileWithKey += len(cnt)
+totalNbOccurrence += sum(cnt.values())
 jspFileNb = 0
 cnt = Counter()
 
@@ -101,11 +110,16 @@ keyInFile['../Projects/airsonic'] = {
 	"totalNbFile": jspFileNb,
 	"listOfFileWithKey": cnt.copy(),
 	"totalNbFileWithKey": len(cnt),
-	"average": (len(cnt) / jspFileNb) * 100
+	"average": (len(cnt) / jspFileNb) * 100,
+	"totalNbOccurrence": sum(cnt.values()),
+	# "averageOccurrencePerFile": (sum(cnt.values()) / len(cnt)) * 100
 }
+
+data["airsonic"] = keyInFile['../Projects/airsonic']["average"]
 
 totalNbFile += javaFileNb
 totalNbFileWithKey += len(cnt)
+totalNbOccurrence += sum(cnt.values())
 javaFileNb = 0
 cnt = Counter()
 for f in Path('../Projects/freeplane').walkfiles():
@@ -122,11 +136,16 @@ keyInFile['../Projects/freeplane'] = {
 	"totalNbFile": javaFileNb,
 	"listOfFileWithKey": cnt.copy(),
 	"totalNbFileWithKey": len(cnt),
-	"average": (len(cnt) / javaFileNb) * 100
+	"average": (len(cnt) / javaFileNb) * 100,
+	"totalNbOccurrence": sum(cnt.values()),
+	# "averageOccurrencePerFile": (sum(cnt.values()) / len(cnt)) * 100
 }
+data["freeplane"] = keyInFile['../Projects/freeplane']["average"]
+
 
 totalNbFile += javaFileNb
 totalNbFileWithKey += len(cnt)
+totalNbOccurrence += sum(cnt.values())
 javaFileNb = 0
 cnt = Counter()
 for f in Path('../Projects/RouteConverter').walkfiles():
@@ -143,24 +162,32 @@ keyInFile['../Projects/RouteConverter'] = {
 	"totalNbFile": javaFileNb,
 	"listOfFileWithKey": cnt.copy(),
 	"totalNbFileWithKey": len(cnt),
-	"average": (len(cnt) / javaFileNb) * 100
+	"average": (len(cnt) / javaFileNb) * 100,
+	"totalNbOccurrence": sum(cnt.values()),
+	# "averageOccurrencePerFile": (sum(cnt.values()) / len(cnt)) * 100
 }
-
+data["RouteConverter"] = keyInFile['../Projects/RouteConverter']["average"]
 
 
 totalNbFile += javaFileNb
 totalNbFileWithKey += len(cnt)
+totalNbOccurrence += sum(cnt.values())
 
 keyInFile["Java stat"] = {
 	"totalNbFile": totalNbFile,
 	"totalNbFileWithKey": totalNbFileWithKey,
-	"average": (totalNbFileWithKey / totalNbFile) * 100
+	"average": (totalNbFileWithKey / totalNbFile) * 100,
+	"totalNbOccurrence": totalNbOccurrence,
+	"averageOccurrencePerProject": (totalNbOccurrence / 4)
 }
 
 javaFileNb = 0
 cnt = Counter()
 totalNbFile = 0
 totalNbFileWithKey = 0
+totalNbOccurrence = 0
+
+
 for s in androidProjects:
 	for f in Path(s).walkfiles():
 		if patternForJava.match(f):
@@ -175,16 +202,22 @@ for s in androidProjects:
 		"totalNbFile": javaFileNb,
 		"listOfFileWithKey": cnt.copy(),
 		"totalNbFileWithKey": len(cnt),
-		"average": (len(cnt) / javaFileNb) * 100
+		"average": (len(cnt) / javaFileNb) * 100,
+		"totalNbOccurrence": sum(cnt.values()),
+		# "averageOccurrencePerFile": (len(cnt) sum(cnt.values()) / ) * 100
 	}
 	totalNbFile += javaFileNb
 	totalNbFileWithKey += len(cnt)
+	totalNbOccurrence += sum(cnt.values())
+	data[s.split("/")[2]] = keyInFile[s]["average"]
 	javaFileNb = 0
 	cnt.clear()
 keyInFile["Android stat"] = {
 	"totalNbFile": totalNbFile,
 	"totalNbFileWithKey": totalNbFileWithKey,
-	"average": (totalNbFileWithKey / totalNbFile) * 100
+	"average": (totalNbFileWithKey / totalNbFile) * 100,
+	"totalNbOccurrence": totalNbOccurrence,
+	"averageOccurrencePerProject": (totalNbOccurrence / len(androidProjects)) * 100
 }
 
 f = open("result_key_in_java.json", "w")
@@ -194,21 +227,12 @@ result = json.dumps(keyInFile, indent=4, sort_keys=True)
 print(result)
 f.write(result + "\n")
 
-# f.close()
-#
-# x = len(keyInFile)
-# y = [i for i in x]
-# y_2 = [i**2 for i in x]
-# y_3 = [i**3 for i in x]
-#
-# print(x)
-#
-# plt.plot(x, y, label='linear')
-# plt.plot(x, y_2, label='quadratic')
-# plt.plot(x, y_3, label='cubic')
-#
-# plt.xlabel('x label')
-# plt.ylabel('y label')
-# plt.title("Simple Plot")
-# plt.legend()
-# plt.show()
+names = list(data.keys())
+values = list(data.values())
+
+plt.title("Pourcentage de marqueur liés à la localisation par projet")
+plt.xlabel('Projets')
+plt.xticks(rotation='vertical')
+plt.ylabel('Fichier marqueur / total fichier (%)')
+plt.bar(names, values)
+plt.show()
