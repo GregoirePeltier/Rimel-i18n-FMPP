@@ -5,36 +5,19 @@ f = open("../output/output.txt", "r")
 allLines = f.read();
 f.close();
 
-
-commitsLoc = [];
-commits = [];
-names = [];
+filesImpacted = [];
 allLinesClean = allLines[:(allLines.rfind(';'))]
 for line in allLinesClean.split('\n'):
 	nameProject = line[:(line.find('='))].replace(" ","")
-	names.append(nameProject)
+	nbFilesLoc = (line[(line.find('='))+1:]).replace(" ","").split(";")
+	sumAllFile = 0
+	for nbFileLoc in nbFilesLoc:
+		sumAllFile += int(nbFileLoc);
 
-	commitLoc = (line[(line.find('='))+1:line.find('/')]).replace(" ","")
-	commit = (line[(line.find('/'))+1:]).replace(" ","")
-	pourcentageLoc = (float(commitLoc) / float(commit)) * 100
-
-
-	print(pourcentageLoc);
-	commitsLoc.append(int(pourcentageLoc))
-
-	
-
-	commits.append(int(commit))
+	pourcentage = (sumAllFile / len(nbFileLoc)) * 100
+	filesImpacted.append(pourcentage);
 
 
-ind = np.arange(len(names))
-width = 0.50
-p1 = plt.bar(ind, tuple(commits), width)
-p2 = plt.bar(ind, tuple(commitsLoc), width, bottom=tuple(commits))
-
-plt.ylabel('Nombre de commits liés à la localisation par rapport au nombre de commits sur la branche master')
-plt.title('')
-plt.xticks(ind, tuple(names), rotation='vertical')
-plt.legend((p1[0], p2[0]), ('Nb commits', 'Commits localisation'))
-
-plt.show()
+fig1, ax1 = plt.subplots()
+ax1.set_title('Nombre de fichiers modifiés lors d\'un commit lié à la i10n')
+ax1.boxplot(filesImpacted)
