@@ -1,7 +1,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 
-f = open("../output/output.txt", "r")
+f = open("../output/outputFile.txt", "r")
 allLines = f.read();
 f.close();
 
@@ -12,12 +12,17 @@ for line in allLinesClean.split('\n'):
 	nbFilesLoc = (line[(line.find('='))+1:]).replace(" ","").split(";")
 	sumAllFile = 0
 	for nbFileLoc in nbFilesLoc:
-		sumAllFile += int(nbFileLoc);
+		if(nbFileLoc !=  ''):
+			sumAllFile = int(nbFileLoc) + sumAllFile;
 
-	pourcentage = (sumAllFile / len(nbFileLoc)) * 100
+	print("somme ", sumAllFile, " nb files ", len(nbFilesLoc))
+	pourcentage = (sumAllFile / len(nbFilesLoc) - 1)
 	filesImpacted.append(pourcentage);
 
-
-fig1, ax1 = plt.subplots()
-ax1.set_title('Nombre de fichiers modifiés lors d\'un commit lié à la i10n')
-ax1.boxplot(filesImpacted)
+plt.title('Moyenne du % de fichiers impactés par commits liés à la l10n')
+plt.xticks(rotation='vertical')
+plt.ylabel("Pourcentage")
+plt.boxplot(filesImpacted)
+plt.ylim(0,5)
+plt.show()
+toGraph()
