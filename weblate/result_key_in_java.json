@@ -30,7 +30,8 @@
             "../Projects/Android-IMSI-Catcher-Detector\\AIMSICD\\src\\main\\java\\com\\secupwn\\aimsicd\\utils\\RequestTask.java": 11
         },
         "totalNbFile": 105,
-        "totalNbFileWithKey": 26
+        "totalNbFileWithKey": 26,
+        "totalNbOccurrence": 148
     },
     "../Projects/Android-Open-Radio": {
         "average": 31.25,
@@ -47,7 +48,8 @@
             "../Projects/Android-Open-Radio\\app\\src\\main\\java\\org\\y20k\\transistor\\helpers\\StationFetcher.java": 27
         },
         "totalNbFile": 32,
-        "totalNbFileWithKey": 10
+        "totalNbFileWithKey": 10,
+        "totalNbOccurrence": 62
     },
     "../Projects/AndroidApp": {
         "average": 11.267605633802818,
@@ -62,7 +64,8 @@
             "../Projects/AndroidApp\\CityZenApp\\app\\src\\main\\java\\com\\cityzen\\cityzen\\Utils\\MapUtils\\Search\\nominatimparser\\Request.java": 3
         },
         "totalNbFile": 71,
-        "totalNbFileWithKey": 8
+        "totalNbFileWithKey": 8,
+        "totalNbOccurrence": 48
     },
     "../Projects/AsteroidOSSync": {
         "average": 3.1578947368421053,
@@ -78,7 +81,8 @@
             "../Projects/AsteroidOSSync\\app\\src\\main\\lib\\material-intro-screen\\material-intro-screen\\src\\main\\java\\io\\github\\dreierf\\materialintroscreen\\listeners\\MessageButtonBehaviourOnPageSelected.java": 1
         },
         "totalNbFile": 285,
-        "totalNbFileWithKey": 9
+        "totalNbFileWithKey": 9,
+        "totalNbOccurrence": 30
     },
     "../Projects/Blurify": {
         "average": 27.27272727272727,
@@ -88,7 +92,8 @@
             "../Projects/Blurify\\blurify\\src\\main\\java\\com\\chteuchteu\\blurify\\ui\\Activity_Main.java": 3
         },
         "totalNbFile": 11,
-        "totalNbFileWithKey": 3
+        "totalNbFileWithKey": 3,
+        "totalNbOccurrence": 7
     },
     "../Projects/DietDiaryApp": {
         "average": 20.51282051282051,
@@ -103,7 +108,8 @@
             "../Projects/DietDiaryApp\\app\\src\\main\\java\\com\\canyapan\\dietdiaryapp\\services\\DailyReminderService.java": 3
         },
         "totalNbFile": 39,
-        "totalNbFileWithKey": 8
+        "totalNbFileWithKey": 8,
+        "totalNbOccurrence": 21
     },
     "../Projects/FeedTV": {
         "average": 23.52941176470588,
@@ -114,7 +120,8 @@
             "../Projects/FeedTV\\app\\src\\main\\java\\org\\juanro\\feedtv\\MainViewModel.java": 2
         },
         "totalNbFile": 17,
-        "totalNbFileWithKey": 4
+        "totalNbFileWithKey": 4,
+        "totalNbOccurrence": 22
     },
     "../Projects/KISS": {
         "average": 9.6,
@@ -133,13 +140,15 @@
             "../Projects/KISS\\app\\src\\main\\java\\fr\\neamar\\kiss\\result\\ShortcutsResult.java": 3
         },
         "totalNbFile": 125,
-        "totalNbFileWithKey": 12
+        "totalNbFileWithKey": 12,
+        "totalNbOccurrence": 41
     },
     "../Projects/Logfly": {
         "average": 0.0,
         "listOfFileWithKey": {},
         "totalNbFile": 184,
-        "totalNbFileWithKey": 0
+        "totalNbFileWithKey": 0,
+        "totalNbOccurrence": 0
     },
     "../Projects/Markdown-Notes": {
         "average": 16.666666666666664,
@@ -148,7 +157,8 @@
             "../Projects/Markdown-Notes\\app\\src\\main\\java\\de\\x4fyr\\markdownnotes\\MainActivity.java": 1
         },
         "totalNbFile": 12,
-        "totalNbFileWithKey": 2
+        "totalNbFileWithKey": 2,
+        "totalNbOccurrence": 2
     },
     "../Projects/NewPipe": {
         "average": 21.12676056338028,
@@ -215,7 +225,8 @@
             "../Projects/NewPipe\\app\\src\\main\\java\\us\\shandian\\giga\\ui\\common\\Deleter.java": 1
         },
         "totalNbFile": 284,
-        "totalNbFileWithKey": 60
+        "totalNbFileWithKey": 60,
+        "totalNbOccurrence": 286
     },
     "../Projects/OpenBikeSharing": {
         "average": 17.391304347826086,
@@ -226,7 +237,8 @@
             "../Projects/OpenBikeSharing\\app\\src\\main\\java\\be\\brunoparmentier\\openbikesharing\\app\\activities\\StationsListActivity.java": 7
         },
         "totalNbFile": 23,
-        "totalNbFileWithKey": 4
+        "totalNbFileWithKey": 4,
+        "totalNbOccurrence": 17
     },
     "../Projects/OpenCircle": {
         "average": 16.666666666666664,
@@ -241,13 +253,15 @@
             "../Projects/OpenCircle\\app\\src\\main\\java\\com\\circleof6\\ui\\SharingAppActivity.java": 3
         },
         "totalNbFile": 48,
-        "totalNbFileWithKey": 8
+        "totalNbFileWithKey": 8,
+        "totalNbOccurrence": 36
     },
     "../Projects/OpenRefine": {
         "average": 0.0,
         "listOfFileWithKey": {},
         "totalNbFile": 975,
-        "totalNbFileWithKey": 0
+        "totalNbFileWithKey": 0,
+        "totalNbOccurrence": 0
     },
     "../Projects/Osmand": {
         "average": 27.859922178988327,
@@ -612,7 +626,8 @@
             "../Projects/Osmand\\plugins\\Osmand-Skimaps\\src\\net\\osmand\\skimaps\\SkiMapsActivity.java": 1
         },
         "totalNbFile": 1285,
-        "totalNbFileWithKey": 358
+        "totalNbFileWithKey": 358,
+        "totalNbOccurrence": 1873
     },
     "../Projects/PixelKnot": {
         "average": 11.11111111111111,
@@ -623,7 +638,8 @@
             "../Projects/PixelKnot\\PixelKnot\\src\\main\\java\\info\\guardianproject\\pixelknot\\crypto\\Apg.java": 8
         },
         "totalNbFile": 36,
-        "totalNbFileWithKey": 4
+        "totalNbFileWithKey": 4,
+        "totalNbOccurrence": 13
     },
     "../Projects/RedReader": {
         "average": 18.39080459770115,
@@ -678,7 +694,8 @@
             "../Projects/RedReader\\src\\main\\java\\org\\quantumbadger\\redreader\\views\\webview\\WebViewFixed.java": 1
         },
         "totalNbFile": 261,
-        "totalNbFileWithKey": 48
+        "totalNbFileWithKey": 48,
+        "totalNbOccurrence": 269
     },
     "../Projects/RouteConverter": {
         "average": 5.058605798889575,
@@ -767,7 +784,8 @@
             "../Projects/RouteConverter\\tileserver-maps\\src\\main\\java\\slash\\navigation\\maps\\tileserver\\TileServerMapManager.java": 2
         },
         "totalNbFile": 1621,
-        "totalNbFileWithKey": 82
+        "totalNbFileWithKey": 82,
+        "totalNbOccurrence": 188
     },
     "../Projects/SkyTube": {
         "average": 18.333333333333332,
@@ -807,7 +825,8 @@
             "../Projects/SkyTube\\app\\src\\main\\java\\free\\rm\\skytube\\gui\\fragments\\preferences\\VideoPlayerPreferenceFragment.java": 3
         },
         "totalNbFile": 180,
-        "totalNbFileWithKey": 33
+        "totalNbFileWithKey": 33,
+        "totalNbOccurrence": 120
     },
     "../Projects/StarkeVerben": {
         "average": 18.181818181818183,
@@ -818,7 +837,8 @@
             "../Projects/StarkeVerben\\app\\src\\main\\java\\org\\sw24softwares\\starkeverben\\SettingsFragment.java": 1
         },
         "totalNbFile": 22,
-        "totalNbFileWithKey": 4
+        "totalNbFileWithKey": 4,
+        "totalNbOccurrence": 19
     },
     "../Projects/Tok-Android": {
         "average": 0.1976284584980237,
@@ -826,7 +846,8 @@
             "../Projects/Tok-Android\\app\\src\\main\\java\\com\\client\\tok\\ui\\clipimg\\ClipImgActivity.java": 1
         },
         "totalNbFile": 506,
-        "totalNbFileWithKey": 1
+        "totalNbFileWithKey": 1,
+        "totalNbOccurrence": 1
     },
     "../Projects/TrebleShot": {
         "average": 38.095238095238095,
@@ -897,7 +918,8 @@
             "../Projects/TrebleShot\\app\\src\\main\\java\\com\\genonbeta\\TrebleShot\\widget\\EditableListAdapter.java": 1
         },
         "totalNbFile": 168,
-        "totalNbFileWithKey": 64
+        "totalNbFileWithKey": 64,
+        "totalNbOccurrence": 227
     },
     "../Projects/World-Weather": {
         "average": 14.772727272727273,
@@ -917,7 +939,8 @@
             "../Projects/World-Weather\\WorldWeather\\app\\src\\main\\java\\com\\haringeymobile\\ukweather\\weather\\WeatherInformationDisplayer.java": 10
         },
         "totalNbFile": 88,
-        "totalNbFileWithKey": 13
+        "totalNbFileWithKey": 13,
+        "totalNbOccurrence": 67
     },
     "../Projects/airsonic": {
         "average": 50.0,
@@ -955,7 +978,8 @@
             "../Projects/airsonic\\airsonic-main\\src\\main\\webapp\\WEB-INF\\jsp\\videoMain.jsp": 1
         },
         "totalNbFile": 62,
-        "totalNbFileWithKey": 31
+        "totalNbFileWithKey": 31,
+        "totalNbOccurrence": 97
     },
     "../Projects/andors-trail": {
         "average": 16.417910447761194,
@@ -995,7 +1019,8 @@
             "../Projects/andors-trail\\AndorsTrail\\src\\com\\gpl\\rpg\\AndorsTrail\\view\\ShopItemContainerAdapter.java": 2
         },
         "totalNbFile": 201,
-        "totalNbFileWithKey": 33
+        "totalNbFileWithKey": 33,
+        "totalNbOccurrence": 178
     },
     "../Projects/android-app": {
         "average": 13.131313131313133,
@@ -1015,13 +1040,15 @@
             "../Projects/android-app\\app\\src\\main\\java\\fr\\gaulupeau\\apps\\Poche\\ui\\preferences\\SettingsActivity.java": 13
         },
         "totalNbFile": 99,
-        "totalNbFileWithKey": 13
+        "totalNbFileWithKey": 13,
+        "totalNbOccurrence": 93
     },
     "../Projects/apple-flinger": {
         "average": 0.0,
         "listOfFileWithKey": {},
         "totalNbFile": 114,
-        "totalNbFileWithKey": 0
+        "totalNbFileWithKey": 0,
+        "totalNbOccurrence": 0
     },
     "../Projects/apps-android-commons": {
         "average": 17.94871794871795,
@@ -1077,7 +1104,8 @@
             "../Projects/apps-android-commons\\app\\src\\main\\java\\fr\\free\\nrw\\commons\\wikidata\\WikidataEditService.java": 3
         },
         "totalNbFile": 273,
-        "totalNbFileWithKey": 49
+        "totalNbFileWithKey": 49,
+        "totalNbOccurrence": 222
     },
     "../Projects/boilr": {
         "average": 46.51162790697674,
@@ -1104,7 +1132,8 @@
             "../Projects/boilr\\src\\main\\java\\mobi\\boilr\\boilr\\widget\\SearchableListAdapter.java": 1
         },
         "totalNbFile": 43,
-        "totalNbFileWithKey": 20
+        "totalNbFileWithKey": 20,
+        "totalNbOccurrence": 69
     },
     "../Projects/chibe": {
         "average": 16.666666666666664,
@@ -1113,7 +1142,8 @@
             "../Projects/chibe\\src\\main\\java\\com\\jmstudios\\chibe\\preference\\IntervalSeekBarPreference.java": 8
         },
         "totalNbFile": 12,
-        "totalNbFileWithKey": 2
+        "totalNbFileWithKey": 2,
+        "totalNbOccurrence": 18
     },
     "../Projects/freeplane": {
         "average": 13.543091655266759,
@@ -1318,7 +1348,8 @@
             "../Projects/freeplane\\freeplane_plugin_svg\\src\\main\\java\\org\\freeplane\\plugin\\svg\\SvgViewerFactory.java": 1
         },
         "totalNbFile": 1462,
-        "totalNbFileWithKey": 198
+        "totalNbFileWithKey": 198,
+        "totalNbOccurrence": 428
     },
     "../Projects/gdroidclient": {
         "average": 8.955223880597014,
@@ -1331,7 +1362,8 @@
             "../Projects/gdroidclient\\app\\src\\main\\java\\org\\gdroid\\gdroid\\installer\\baria\\ManualAppInstallActivity.java": 4
         },
         "totalNbFile": 67,
-        "totalNbFileWithKey": 6
+        "totalNbFileWithKey": 6,
+        "totalNbOccurrence": 23
     },
     "../Projects/getback_gps": {
         "average": 29.268292682926827,
@@ -1350,7 +1382,8 @@
             "../Projects/getback_gps\\src\\java\\com\\github\\ruleant\\getback_gps\\lib\\Longitude.java": 2
         },
         "totalNbFile": 41,
-        "totalNbFileWithKey": 12
+        "totalNbFileWithKey": 12,
+        "totalNbOccurrence": 69
     },
     "../Projects/ghini.pocket": {
         "average": 4.3478260869565215,
@@ -1359,7 +1392,8 @@
             "../Projects/ghini.pocket\\app\\src\\main\\java\\me\\ghini\\pocket\\DesktopSource.java": 1
         },
         "totalNbFile": 46,
-        "totalNbFileWithKey": 2
+        "totalNbFileWithKey": 2,
+        "totalNbOccurrence": 10
     },
     "../Projects/ghini.tour": {
         "average": 16.666666666666664,
@@ -1367,7 +1401,8 @@
             "../Projects/ghini.tour\\app\\src\\main\\java\\me\\ghini\\tour\\AboutBox.java": 2
         },
         "totalNbFile": 6,
-        "totalNbFileWithKey": 1
+        "totalNbFileWithKey": 1,
+        "totalNbOccurrence": 2
     },
     "../Projects/haven": {
         "average": 34.146341463414636,
@@ -1388,7 +1423,8 @@
             "../Projects/haven\\src\\main\\java\\org\\havenapp\\main\\ui\\PPAppIntro.java": 7
         },
         "totalNbFile": 41,
-        "totalNbFileWithKey": 14
+        "totalNbFileWithKey": 14,
+        "totalNbOccurrence": 57
     },
     "../Projects/lexica": {
         "average": 7.142857142857142,
@@ -1399,7 +1435,8 @@
             "../Projects/lexica\\app\\src\\main\\java\\com\\serwylo\\lexica\\view\\LexicaView.java": 2
         },
         "totalNbFile": 56,
-        "totalNbFileWithKey": 4
+        "totalNbFileWithKey": 4,
+        "totalNbOccurrence": 11
     },
     "../Projects/locationprivacy": {
         "average": 5.555555555555555,
@@ -1407,7 +1444,8 @@
             "../Projects/locationprivacy\\app\\src\\main\\java\\info\\guardianproject\\locationprivacy\\ActionSendActivity.java": 2
         },
         "totalNbFile": 18,
-        "totalNbFileWithKey": 1
+        "totalNbFileWithKey": 1,
+        "totalNbOccurrence": 2
     },
     "../Projects/loyalty-card-locker": {
         "average": 17.073170731707318,
@@ -1421,7 +1459,8 @@
             "../Projects/loyalty-card-locker\\app\\src\\test\\java\\protect\\card_locker\\LoyaltyCardViewActivityTest.java": 5
         },
         "totalNbFile": 41,
-        "totalNbFileWithKey": 7
+        "totalNbFileWithKey": 7,
+        "totalNbOccurrence": 28
     },
     "../Projects/min-cal-widget": {
         "average": 3.571428571428571,
@@ -1429,7 +1468,8 @@
             "../Projects/min-cal-widget\\app\\src\\main\\java\\cat\\mvmike\\minimalcalendarwidget\\infrastructure\\SystemResolver.java": 30
         },
         "totalNbFile": 28,
-        "totalNbFileWithKey": 1
+        "totalNbFileWithKey": 1,
+        "totalNbOccurrence": 30
     },
     "../Projects/mtmods4android": {
         "average": 38.46153846153847,
@@ -1446,7 +1486,8 @@
             "../Projects/mtmods4android\\app\\src\\main\\java\\com\\rubenwardy\\minetestmodmanager\\views\\WorldConfigActivity.java": 2
         },
         "totalNbFile": 26,
-        "totalNbFileWithKey": 10
+        "totalNbFileWithKey": 10,
+        "totalNbOccurrence": 38
     },
     "../Projects/obscuracam": {
         "average": 6.382978723404255,
@@ -1456,7 +1497,8 @@
             "../Projects/obscuracam\\app\\src\\main\\java\\org\\witness\\obscuracam\\ui\\ImageEditor.java": 9
         },
         "totalNbFile": 47,
-        "totalNbFileWithKey": 3
+        "totalNbFileWithKey": 3,
+        "totalNbOccurrence": 19
     },
     "../Projects/openScale": {
         "average": 14.893617021276595,
@@ -1484,7 +1526,8 @@
             "../Projects/openScale\\android_app\\app\\src\\main\\java\\com\\health\\openscale\\gui\\widget\\WidgetConfigure.java": 1
         },
         "totalNbFile": 141,
-        "totalNbFileWithKey": 21
+        "totalNbFileWithKey": 21,
+        "totalNbOccurrence": 105
     },
     "../Projects/peertube-android": {
         "average": 18.867924528301888,
@@ -1501,13 +1544,15 @@
             "../Projects/peertube-android\\app\\src\\main\\java\\net\\schueller\\peertube\\network\\Session.java": 10
         },
         "totalNbFile": 53,
-        "totalNbFileWithKey": 10
+        "totalNbFileWithKey": 10,
+        "totalNbOccurrence": 44
     },
     "../Projects/ripple": {
         "average": 0.0,
         "listOfFileWithKey": {},
         "totalNbFile": 9,
-        "totalNbFileWithKey": 0
+        "totalNbFileWithKey": 0,
+        "totalNbOccurrence": 0
     },
     "../Projects/tasks": {
         "average": 12.897196261682243,
@@ -1583,7 +1628,8 @@
             "../Projects/tasks\\app\\src\\main\\java\\org\\tasks\\widget\\ShortcutConfigActivity.java": 1
         },
         "totalNbFile": 535,
-        "totalNbFileWithKey": 69
+        "totalNbFileWithKey": 69,
+        "totalNbOccurrence": 219
     },
     "../Projects/unity": {
         "average": 18.82183908045977,
@@ -2114,7 +2160,8 @@
             "../Projects/unity\\web-upman\\src\\main\\java\\io\\imunity\\upman\\userupdates\\UserUpdatesView.java": 2
         },
         "totalNbFile": 2784,
-        "totalNbFileWithKey": 524
+        "totalNbFileWithKey": 524,
+        "totalNbOccurrence": 2973
     },
     "../Projects/your-local-weather": {
         "average": 25.806451612903224,
@@ -2153,16 +2200,21 @@
             "../Projects/your-local-weather\\app\\src\\main\\java\\org\\thosp\\yourlocalweather\\widget\\MoreWidgetProvider.java": 1
         },
         "totalNbFile": 124,
-        "totalNbFileWithKey": 32
+        "totalNbFileWithKey": 32,
+        "totalNbOccurrence": 274
     },
     "Android stat": {
         "average": 14.591324874594275,
+        "averageOccurrencePerProject": 10954.545454545454,
         "totalNbFile": 6778,
-        "totalNbFileWithKey": 989
+        "totalNbFileWithKey": 989,
+        "totalNbOccurrence": 4820
     },
     "Java stat": {
         "average": 9.652063345278004,
+        "averageOccurrencePerProject": 921.5,
         "totalNbFile": 8651,
-        "totalNbFileWithKey": 835
+        "totalNbFileWithKey": 835,
+        "totalNbOccurrence": 3686
     }
 }
