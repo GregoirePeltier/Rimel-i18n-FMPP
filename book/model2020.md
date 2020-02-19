@@ -109,6 +109,25 @@ Afin d'avoir une donnée globale nous avons analysé les 1000 projets Java les m
 
 1. Analyse des résultats & construction d’une conclusion : Une fois votre expérience terminée, vous récupérez vos mesures et vous les analysez pour voir si votre hypothèse tient la route. 
 
+1. Analyse des résultats concernant l'architecture des projets
+
+Projets Android :
+Concernant l'architecture des projets elle n'est pas impactés par la gestion de la localisation puisque tous les projets androids suivent la même norme qui consiste a ranger les fichiers de traductions dans le répertoire "res" à la racine. La gestion des différentes langues se fait avec différents répertoires "values". Un répertoire va correspondre à une langage par exemple /res/values-de contenant un fichier "strings.xml".
+
+[INSERTION android_project.png]
+
+Nous pouvons voir graphique au graphique ci-dessus que la taille des projets (ici le nombre de java file servent de références) n'a pas d'incidence sur la quantité de langue traduite. On peut aussi remarquer que les projets qui sont plus petits ont une grosse quantité de langues traduites (par exemple: mini.pocket, PixelKnot, card-locker) par rapport à leur quantité de fichier java. [A REVOIR]
+
+
+Projets Java :
+
+[INSERTION java_project_graph.png]
+
+
+[INSERTION java_project_properties_localisation.png]
+
+
+
 ## VI. Tools \(facultatif\)
 Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à 
 \(1\) pouvoir reproduire vos expériementations, 
