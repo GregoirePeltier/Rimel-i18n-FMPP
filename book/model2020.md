@@ -26,7 +26,7 @@ We are four students in last year of Polytech' Nice-Sophia specialized in Softwa
 - hugo.francois@etu.unice.fr
 - marion.marguerettaz@etu.unice.fr
 
-## I. Research context /Project
+## I. Context du projet
 Nous avons choisi de restreindre le sujet en parlant de localisation (l10n) et non pas d’internationalisation (i18n). 
 En effet i18n permet de concevoir et développer une application qui permet de facilement mettre en place l10n. 
 
@@ -38,11 +38,6 @@ En choisissant l10n cela nous permet de réduire l’amplitude du sujet et donc 
 Nous avons choisi de poser la question : “Quel est l’impact des techniques de mise en oeuvre de la localisation sur les projets informatique ?”.
 Nous avons défini les techniques comme un ensemble des framework, librairies qui peuvent être utilisés par un projet.
 Cette question est intéressante puisqu’elle touche à deux aspects, quelles techniques sont utilisées, mais aussi est-ce que ces techniques apportent des contraintes sur le projet , et lesquelles sont-elles ?
-
-
-Préciser ici votre contexte.
-
-Pourquoi c'est intéressant.
 
 ![Figure 1: Logo UCA](../assets/model/UCAlogoQlarge.png){:height="50px" }
 
