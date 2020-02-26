@@ -104,12 +104,13 @@ Toutes ces informations nous permettront d'avoir des métriques simples pour ré
 
 Afin d'avoir une donnée globale nous avons analysé les 1000 projets Java les mieux notés sur Github pour avoir une estimation du nombre de projets faisant de la traduction (tous outils confondus).
 
+Concernant l'organisation, nous avons procédé en deux étapes pour chaque analyse. Tout d'abord créer un script permettant de récolter une information spécifique puis créer un ou plusieurs graphiques depuis ces résultats afin de mieux les visualiser et les analyser. 
+Chaque membre de l'équipe a créé des scripts et des graphiques.
 
-## V. Result Analysis and Conclusion
+## V. Analyse des résultats
 
 1. Analyse des résultats & construction d’une conclusion : Une fois votre expérience terminée, vous récupérez vos mesures et vous les analysez pour voir si votre hypothèse tient la route. 
 
-<<<<<<< HEAD
 1. Analyse des résultats concernant l'architecture des projets
 
 Projets Android :
@@ -128,10 +129,6 @@ Projets Java :
 [INSERTION java_project_properties_localisation.png]
 
 
-
-=======
-Resultat du nombre de marqueur dans les projets :
-```json
     "Android stat": {
         "average": 14.591324874594275,
         "averageOccurrencePerProject": 109.54545454545455,
@@ -146,9 +143,12 @@ Resultat du nombre de marqueur dans les projets :
         "totalNbFileWithKey": 835,
         "totalNbOccurrence": 3686
     }
-```
->>>>>>> 9296dba7073d06a04d20565e1a912fc7fb7d2a6b
-## VI. Tools \(facultatif\)
+
+## VI. Conclusion 
+
+
+
+## VII. Outils \(facultatif\)
 Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à 
 \(1\) pouvoir reproduire vos expériementations, 
 \(2\) partager/expliquer à d'autres l'usage des outils.
