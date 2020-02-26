@@ -109,6 +109,7 @@ Afin d'avoir une donnée globale nous avons analysé les 1000 projets Java les m
 
 1. Analyse des résultats & construction d’une conclusion : Une fois votre expérience terminée, vous récupérez vos mesures et vous les analysez pour voir si votre hypothèse tient la route. 
 
+<<<<<<< HEAD
 1. Analyse des résultats concernant l'architecture des projets
 
 Projets Android :
@@ -128,6 +129,25 @@ Projets Java :
 
 
 
+=======
+Resultat du nombre de marqueur dans les projets :
+```json
+    "Android stat": {
+        "average": 14.591324874594275,
+        "averageOccurrencePerProject": 109.54545454545455,
+        "totalNbFile": 6778,
+        "totalNbFileWithKey": 989,
+        "totalNbOccurrence": 4820
+    },
+    "Java stat": {
+        "average": 9.652063345278004,
+        "averageOccurrencePerProject": 921.5,
+        "totalNbFile": 8651,
+        "totalNbFileWithKey": 835,
+        "totalNbOccurrence": 3686
+    }
+```
+>>>>>>> 9296dba7073d06a04d20565e1a912fc7fb7d2a6b
 ## VI. Tools \(facultatif\)
 Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à 
 \(1\) pouvoir reproduire vos expériementations, 

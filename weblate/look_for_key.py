@@ -217,7 +217,7 @@ keyInFile["Android stat"] = {
 	"totalNbFileWithKey": totalNbFileWithKey,
 	"average": (totalNbFileWithKey / totalNbFile) * 100,
 	"totalNbOccurrence": totalNbOccurrence,
-	"averageOccurrencePerProject": (totalNbOccurrence / len(androidProjects)) * 100
+	"averageOccurrencePerProject": (totalNbOccurrence / len(androidProjects))
 }
 
 f = open("result_key_in_java.json", "w")
