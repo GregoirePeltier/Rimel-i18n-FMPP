@@ -141,11 +141,6 @@ On remarque aussi qu'un bon nombre de projet (33 / 64) ont leur pourcentage de c
 Encore une fois, nous nous n'attendions pas à ce résulat, et nous pensions voir beaucoup plus de projets possédant une branche de localisation dédiée autre que master. 
 
 On peut toutefois remarquer que le pourcentage de commits de localisation en moyenne sur toutes les branches reste globalement assez proche du nombre de commits maximal, ce qui peut montrer qu'il n'y a pas de grande disparité entre la répartition des commits sur les branches.
-
-
-## VII. Conclusion 
-
-## VIII. Outils \(facultatif\)
 Avec ces valeurs, si on observe que la branche maximale a la même valeur que master, c'est que la localisation se concentre majoritairement sur master.
 
 Enfin, nous avons souhaité étudier la répartition des commits en fonction des auteurs : si le commit a été fait par un humain ou par Weblate. 
@@ -156,6 +151,11 @@ La moyenne est à 50%, le minimum est à 0% et le maximum à 95%. Cela représen
 Nous sommes encore une fois surpris d'avoir la moitié des commits de localisation réalisés par des humains, car nous attendions à un pourcentage
 assez faible, compte tenu de l'automatisation des commits par Weblate.
 
+## VII. Conclusion 
+
+## VIII. Outils \(facultatif\)
+
+
 
 ## VI. Menaces à la validité des résultats
 
@@ -164,7 +164,8 @@ En effet, le fait de récupérer des projets open source sur Weblate peut provoq
 
 De plus, pour déterminer les commits à la localisation nous utilisons des mots-clés ["localization", "l10n", "i18n", "internationalization", "translate", "translation", "weblate"]
 Le problème se trouve dans le fait que ces mots clés ne sont peut être pas les bons, et qu'ils peuvent peut être inclure d'autres commits.
-Pour essayer de corriger ce problème, nous avons déterminé un indice de confiance. Nous avons choisi 40 commits identifiés comme commit de localisation et nous avons vérifié qu'il s'agissait bien de cela. Nous avons donc obtenu : 
+Pour essayer de corriger ce problème, nous avons déterminé un indice de confiance. Nous avons choisi 170 commits identifiés comme commit de localisation et nous avons vérifié qu'il s'agissait bien de cela. Nous avons donc obtenu que 90% de ces commits étaient effectivement des commits de traduction. 
+Cela est un indice de confiance élevé, nous avons donc assez confiance en nos résultats.
 
 
 ## VII. References
