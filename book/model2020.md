@@ -165,21 +165,20 @@ Cela nous donnants le graphique suivant.
 
 ![](../assets/localisation/commit_lie_a_la_localisation_dans_le_temps.png)
 
-On voit donc une répartition relativement disparate après une période de tampons où les projet ne versionne pas de travail lié a la localisation. 
-Et cela que ce soit sur les projet selectioné à travers weblate ou les projets applicant la l10n parmis les 1000 plus populaire sur github 
-représenté ci dessous:
+On voit donc une répartition relativement disparate après une période de plateau où les projets ne versionnent pas de travail liés a la localisation. 
+Et on observe la même chose sur les projets selectionnés à travers weblate où les projets appliquant la l10n parmi les 1000 plus populaires sur github 
+représentés ci dessous:
 
 ![](../assets/localisation/commit_lie_a_la_localisation_dans_le_temps_star.png)
 
-Afin de chercher a exclure les phénomène ponctuelle de commit massifs qui pourrait être effectué sur certain projets
-nous avons grapher la moyenne du nombre de fichiers versioné par pourcentage de temps écoulé, a nouveau pour les deux ensembles de projets
+Afin de chercher a exclure les phénomènes ponctuels de commits massifs qui pourraient être effectués sur certains projets
+nous avons réalisé un graph la moyenne du nombre de fichiers versionnés par pourcentage de temps écoulé, à nouveau pour les deux ensembles de projets.
  ![](../assets/localisation/moyenne_commit_lie_a_la_localisation_dans_le_temps.png)
  ![](../assets/localisation/moyenne_commit_lie_a_la_localisation_dans_le_temps_star.png)
  
-Nous voyons alors un nombre de commits beaucoup plus omogène au cours du temps, a nouveau quelque soit l'échantillons de projets.
+Nous voyons alors un nombre de commits beaucoup plus homogène au cours du temps, à nouveau quelque soit l'échantillon de projets.
 
-Nous pouvons donc voir que les projets tendent en moyenne a avoir une activité constante, cependant parsemé de grand nombre de fichiers commits d'un coup.
-Cela pouvant  
+Nous pouvons donc voir que les projets tendent en moyenne à avoir une activité constante, cependant parsemée de grand nombre de fichiers commités d'un coup.
 
 
 ## VII. Conclusion 
