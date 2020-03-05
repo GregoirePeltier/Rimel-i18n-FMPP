@@ -205,7 +205,6 @@ Si on se penche sur le niveau du fichier, on a pu remarquer que les marqueurs de
 De même que pour la structure des projets, comme il n'existe pas de norme en Java, chaque projet gère à sa façon les marqueurs de traduction.
 
 
-
 Pour résumer cette réponse, en ce qui concerne la structure de projet l'impact est très fort sur les projets Java et plus faibles sur les projets Android.
 Pour les fichiers de code, l'impact est nuancé, 9% des fichiers concernés en moyenne, avec toutefois un très fort écart type : de 0% à 50%
 Enfin, pour l'impact dans le temps, les conséquences de la l10n sont globalement faibles (en moyenne 2 fichiers par unité de temps relative à la durée de vie du projet) mais elles sont constantes tout au long du projet.
