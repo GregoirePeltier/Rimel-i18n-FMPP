@@ -88,10 +88,10 @@ Chaque membre de l'équipe a créé des scripts et des graphiques.
 
 ## V. Analyse des résultats
 
-#### 1. Analyse des résultats concernant l'architecture des projets
+#### 1. Analyse des résultats concernant la structure des projets
 
 Projets Android :
-Concernant l'architecture des projets elle n'est pas impactée par la gestion de la localisation puisque tous les projets androids suivent la même norme qui consiste a ranger les fichiers de traductions dans le répertoire "res" à la racine. La gestion des différentes langues se fait avec différents répertoires "values". Un répertoire va correspondre à une langue par exemple /res/values-de contenant un fichier "strings.xml".
+Concernant la structure des projets elle n'est pas impactée par la gestion de la localisation puisque tous les projets androids suivent la même norme qui consiste a ranger les fichiers de traductions dans le répertoire "res" à la racine. La gestion des différentes langues se fait avec différents répertoires "values". Un répertoire va correspondre à une langue par exemple /res/values-de contenant un fichier "strings.xml".
 
 ![](../assets/localisation/android_project.png)
 
@@ -103,11 +103,11 @@ Concernant les projets Java nous pouvons constater que la localisation des fichi
 
 ![](../assets/localisation/repertoires_contenant_des_properties_par_top_projet.png)
 
-Si nous comparons ces résultats avec la proportion de fichiers properties et fichiers java, nous pouvons constater une corrélation entre les deux. Effectivement, les projets ayant peu de fichiers properties correspondant à la traduction sont ceux qui ont le moins de répertoire les contenant. Si nous reprenons l'exemple de "Jenkins", on voit qu'il y a plus de fichiers properties de traduction que de fichier java et que cela a un impact sur l'architecture du projet, puisque ces fichiers properties sont contenus dans plus de 250 répertoires. De même pour le projet "che", même si la quantité de traduction est moins élevé que "Jenkins", cela semble toujours avoir un impact sur l'architecture, puisque les fichiers liés à localisation sont contenus dans plus de 400 répertoires. Cette corrélation est aussi visible pour les projets "spring-petclinic", "ddsample-core" et "pentaho-kettle".
+Si nous comparons ces résultats avec la proportion de fichiers properties et fichiers java, nous pouvons constater une corrélation entre les deux. Effectivement, les projets ayant peu de fichiers properties correspondant à la traduction sont ceux qui ont le moins de répertoire les contenant. Si nous reprenons l'exemple de "Jenkins", on voit qu'il y a plus de fichiers properties de traduction que de fichier java et que cela a un impact sur la structure du projet, puisque ces fichiers properties sont contenus dans plus de 250 répertoires. De même pour le projet "che", même si la quantité de traduction est moins élevé que "Jenkins", cela semble toujours avoir un impact sur la structure, puisque les fichiers liés à localisation sont contenus dans plus de 400 répertoires. Cette corrélation est aussi visible pour les projets "spring-petclinic", "ddsample-core" et "pentaho-kettle".
 
 ![](../assets/localisation/nombre_de_fichier_properties_par_top_projet.png)
 
-L'architecture des projets android ne semble pas impactée par la localisation. Cela peut s'expliquer par la norme de placement des fichiers de traduction dans le répertoire "res". En revanche, les projets Java purs semblent impactés, cela peut s'expliquer par le manque de norme. Chaque projet semble gérer ses emplacements différemment, et aucun projet place tous ses fichiers de traduction au même endroit, ce qui impacte l'architecture global.
+La structure des projets android ne semble pas impactée par la localisation. Cela peut s'expliquer par la norme de placement des fichiers de traduction dans le répertoire "res". En revanche, les projets Java purs semblent impactés, cela peut s'expliquer par le manque de norme. Chaque projet semble gérer ses emplacements différemment, et aucun projet place tous ses fichiers de traduction au même endroit, ce qui impacte la structure global.
 
 
     "Android stat": {
