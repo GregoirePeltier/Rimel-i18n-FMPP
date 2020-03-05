@@ -182,26 +182,51 @@ Nous pouvons donc voir que les projets tendent en moyenne à avoir une activité
 
 
 ## VII. Conclusion 
+Rappelons les questions posées au début : 
+Sommes nous capables d’identifier l’impact de la localisation dans des projets informatiques ?
+ Sommes nous capables d’évaluer le type d’impact de la localisation ?
+    - Si oui, quels impacts peut-on distinguer ?  
+- Quelles sont les corrélations entre la gestion de version et la mise en oeuvre de la localisation dans un projet informatique ?
+    - Est-ce qu’il y a des branches dédiées ? 
+    
+On est capable d'identifier l'impact de la localisation, et plusieurs types d'impacts :
+- Impact dans la structure des projets avec les fichiers .properties
+- Impact dans les fichiers avec les marqueurs de traductions
+- Impact dans le temps 
 
-L'architecture des projets android ne semble pas impactée par la localisation. 
+
+Au niveau de l'impact sur la structure, l'architecture des projets android ne semble pas impactée par la localisation. 
 Cela peut s'expliquer par la norme de placement des fichiers de traduction dans le répertoire values. 
-En revanche les projets Java purs semblent impactés. Cela peut s'expliquer par le manque de norme [+ ajouter des trucs sur les marqueurs ça doit sûrement être liés] 
+En revanche les projets Java purs semblent impactés. Cela peut s'expliquer par le manque de norme, qui entraîne donc pour chaque projet une gestion différente, donc un impact différent sur chaque structure de projet.
 
-Au niveau de la gestion des branches, on ne distingue pas de forte tendance à avoir une branche dédiée autre que master. Cette tendance peut s'expliquer par le fait que les branches seront eventuellement mergées sur master.
-## VIII. Outils \(facultatif\)
+Si on se penche sur le niveau du fichier, on a pu remarquer que les marqueurs de traducation se trouvaient dans beaucoup de fichiers différents (encore plus fort dans les projets android). 
+De même que pour la structure des projets, comme il n'existe pas de norme en Java, chaque projet gère à sa façon les marqueurs de traduction.
 
+Pour l'impact dans le temps, on remarque un travail globalement constant, avec sporadiquement des pics dans le nombre de commits de traduction. 
 
+Pour résumer cette réponse, en ce qui concerne la structure de projet l'impact est très fort sur les projets Java et plus faibles sur les projets Android.
+Pour les fichiers de code, l'impact est nuancé, 9% des fichiers concernés en moyenne, avec toutefois un très fort écart type : de 0% à 50%
+Enfin, pour l'impact dans le temps, les conséquences de la l10n sont globalement faibles (en moyenne 2 fichiers par unité de temps relative à la durée de vie du projet) mais elles sont constantes tout au long du projet.
 
-## IX. Menaces à la validité des résultats
+Lorsque qu'on étudie la corrélation entre la gestion de version et l'impact de la l10n, on se rend compte que l'impact est très variable selon les projets. 
+Certains projets n'ont que 1% de leur commits liés à la l10n, alors que d'autres en ont 76%.
+Cela peut sans doute s'expliquer par la disparité de structure entre les projets.
+
+Au niveau de la gestion des branches, on ne distingue pas de forte tendance à avoir une branche dédiée à la 10n autre que master.
+Cette tendance peut s'expliquer par le fait que les branches seront éventuellement mergées sur master.
+
+Enfin, au niveau de la répartition des auteurs, nous avons un pourcentage de 50% de commits automatiques par Weblate et de 50% de commits fait par des humains. 
+Il est pour l'instant dur pour nous de définir si cela est un résultat significatif et si on le retrouverait avec un autre outil que Weblate, mais il serait intéressant d'étudier cela.
+
 ## VIII. Menaces à la validité des résultats
 
 Les principales menaces à la validité des résultats se situent dans nos hypothèses  et nos échantillons de départ.
-En effet, le fait de récupérer des projets open source sur Weblate peut provoquer un biais dans les résultats, car les projets open source ne fonctionnent pas de la même manière que des projets "privés".
+En effet, récupérer des projets open source sur Weblate peut provoquer un biais dans les résultats, car les projets open source ne fonctionnent pas de la même manière que des projets "privés".
 
-De plus, pour déterminer les commits à la localisation nous utilisons des mots-clés ["localization", "l10n", "i18n", "internationalization", "translate", "translation", "weblate"]
-Le problème se trouve dans le fait que ces mots clés ne sont peut être pas les bons, et qu'ils peuvent peut être inclure d'autres commits.
-Pour essayer de corriger ce problème, nous avons déterminé un indice de confiance. Nous avons choisi 170 commits identifiés comme commit de localisation et nous avons vérifié qu'il s'agissait bien de cela. Nous avons donc obtenu que 90% de ces commits étaient effectivement des commits de traduction. 
-Cela est un indice de confiance élevé, nous avons donc assez confiance en nos résultats.
+De plus, pour déterminer les commits liés à la localisation nous utilisons des mots-clés ["localization", "l10n", "i18n", "internationalization", "translate", "translation", "weblate"]
+Ces derniers peuvent couvrir des commits qui ne concernent pas la l10n (ex : API Translation from SOAP to REST), ou en exclure d'autres (ex : Fix french)
+Pour essayer de corriger ce problème, nous avons déterminé un indice de confiance. Nous avons choisi 170 commits identifiés comme commits de localisation et nous avons vérifié qu'il s'agissait bien de cela. Nous avons donc obtenu que 90% de ces commits étaient effectivement des commits de traduction. 
+C'est un indice de confiance élevé, nous avons donc assez confiance en ces résultats.
 
 
 ## IX. References
