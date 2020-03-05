@@ -9,17 +9,12 @@ Nous sommes quatre étudiants en dernière année à Polytech Nice Sophia :
 
 ## I. Context du projet
 Nous avons choisi de restreindre le sujet en parlant de localisation (l10n) et non pas d’internationalisation (i18n). 
-En effet i18n permet de concevoir et développer une application qui permet de facilement mettre en place l10n. 
+En effet la i18n permet de concevoir et développer une application qui permet de facilement mettre en place la l10n. 
 
 La localisation est le fait d'adapter un logiciel à un marché international.
 Cela inclut la traduction bien sûr, mais aussi le fait d'adapter l'interface et les tests afin d'être sûrs que le programme fonctionnera dans le langage visé.
                 
-
 En choisissant l10n cela nous permet de réduire l’amplitude du sujet et donc d’avoir une question plus spécifique.
-Nous avons choisi de poser la question : “Quel est l’impact des techniques de mise en oeuvre de la localisation sur les projets informatique ?”.
-Nous avons défini les techniques comme un ensemble des framework, librairies qui peuvent être utilisés par un projet.
-Cette question est intéressante puisqu’elle touche à deux aspects, quelles techniques sont utilisées, mais aussi est-ce que ces techniques apportent des contraintes sur le projet , et lesquelles sont-elles ?
-
 ![Figure 1: Logo UCA](../assets/model/UCAlogoQlarge.png){:height="50px" }
 
 
@@ -37,24 +32,22 @@ Cette question est intéressante puisqu’elle touche à deux aspects, quelles t
 - Sommes nous capables d’évaluer le type d’impact de la localisation ?
     - Si oui, quels impacts peut-on distinguer ?  
 - Quelles sont les corrélations entre la gestion de version et la mise en oeuvre de la localisation dans un projet informatique ?
-    - Est-ce qu’il y a des merges dédiés ?
     - Est-ce qu’il y a des branches dédiées ? 
 
 ## III. Zone de Recherche
 
-Dans le cadre de nos question nous cherchons principalement a conduire des recherches empirique sur des projets existant.
-Nous allons donc chercher a explorer des projets existant qui mettent en place de la l10n
-et extraire de ces derniers des donnée pertinente pour nos questionnements.
+Dans le cadre de nos question nous cherchons principalement à conduire des recherches empiriques sur des projets existants.
+Nous allons donc chercher à explorer des projets existants qui mettent en place de la l10n et extraire de ces derniers des données pertinentes pour nos questionnements.
 
-Pour se faire nous nous appuierons sur des site regroupant des projets qui ont intégré de la l10n, et l'accés a leur code source, comme _Weblate_ 
-qui permet sur sa plateforme principale la traduction participative ouverte au publique. 
+Pour ce faire, nous nous appuierons sur des sites regroupant des projets qui ont intégrés de la l10n, et l'accès à leur code source, comme _Weblate_ 
+qui permet sur sa plateforme principale la traduction participative ouverte au public. 
 
-Egalement afin d'élargir le champs de recherche nous conduirons une recherche sur Github parmis les projet java les plus populaire, afin d'estimé combien applique la l10n et obtenir un autre echantillons de statistique indépendant de l'outils _weblate_.
+Egalement afin d'élargir le champ de recherche nous conduirons une recherche sur Github parmi les projets java les plus populaires, afin d'estimer comment appliquer la l10n et obtenir un autre échantillon de statistiques indépendantes de l'outil _Weblate_.
 
-La selection se ferat a travers du webscrapping et des requetes au api des différents site, 
-afin d'extraire des projet en java et les liens de leurs sources.
-Une fois les différents projet selectioné, nous appliquerons des scripts d'analyse détaillé en IV 
-implémenté en python. 
+La sélection se fera à travers du webscrapping et des requêtes aux API des différents sites, 
+afin d'extraire des projets en java et les liens de leur repository sources.
+Une fois les différents projets sélectionnés, nous appliquerons des scripts d'analyse détaillés en IV 
+implémentés en python. 
 
  
 ## IV. Méthodologie
@@ -98,7 +91,7 @@ Chaque membre de l'équipe a créé des scripts et des graphiques.
 #### 1. Analyse des résultats concernant l'architecture des projets
 
 Projets Android :
-Concernant l'architecture des projets elle n'est pas impactée par la gestion de la localisation puisque tous les projets androids suivent la même norme qui consiste a ranger les fichiers de traductions dans le répertoire "res" à la racine. La gestion des différentes langues se fait avec différents répertoires "values". Un répertoire va correspondre à une langage par exemple /res/values-de contenant un fichier "strings.xml".
+Concernant l'architecture des projets elle n'est pas impactée par la gestion de la localisation puisque tous les projets androids suivent la même norme qui consiste a ranger les fichiers de traductions dans le répertoire "res" à la racine. La gestion des différentes langues se fait avec différents répertoires "values". Un répertoire va correspondre à une langue par exemple /res/values-de contenant un fichier "strings.xml".
 
 ![](../assets/localisation/android_project.png)
 
@@ -148,7 +141,7 @@ Pour cela nous avons réalisé un graphique en batons avec 3 valeurs pour chaque
 ![](../assets/localisation/graph_branches.png)
 
 Globalement, on observe qu'il n'y a pas de branches dédiée à la localisation, car seuls 2 projets montrent une différence notable entre le pourcentage maximal et le pourcentage moyen.
-On remarque aussi qu'un bon nombre de projet (33 / 64) ont leur pourcentage de commits sur master égal au pourcentage maximal de commits, on peut donc supposer que master est la branche dédiée à la localisation pour ces projets là.
+On remarque aussi qu'un bon nombre de projets (33 / 64) ont leur pourcentage de commits sur master égal au pourcentage maximal de commits, on peut donc supposer que master est la branche dédiée à la localisation pour ces projets là.
 
 Encore une fois, nous nous n'attendions pas à ce résulat, et nous pensions voir beaucoup plus de projets possédant une branche de localisation dédiée autre que master. 
 
@@ -165,8 +158,11 @@ assez faible, compte tenu de l'automatisation des commits par Weblate.
 
 ## VII. Conclusion 
 
-L'architecture des projets android ne semble pas impactée par la localisation cela peut s'expliquer par la norme de placement des fichiers de traduction dans le repertoire values. En revanche les projets Java pures semblent impacté cela peut s'expliquer par le manque de norme [+ ajouter des trucs sur les marqueurs ça doit sûrement être liés] 
+L'architecture des projets android ne semble pas impactée par la localisation. 
+Cela peut s'expliquer par la norme de placement des fichiers de traduction dans le répertoire values. 
+En revanche les projets Java purs semblent impactés. Cela peut s'expliquer par le manque de norme [+ ajouter des trucs sur les marqueurs ça doit sûrement être liés] 
 
+Au niveau de la gestion des branches, on ne distingue pas de forte tendance à avoir une branche dédiée autre que master. Cette tendance peut s'expliquer par le fait que les branches seront eventuellement mergées sur master.
 ## VIII. Outils \(facultatif\)
 
 
