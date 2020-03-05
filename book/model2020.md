@@ -95,22 +95,22 @@ Chaque membre de l'équipe a créé des scripts et des graphiques.
 
 ## V. Analyse des résultats
 
-1. Analyse des résultats concernant l'architecture des projets
+#### 1. Analyse des résultats concernant l'architecture des projets
 
 Projets Android :
 Concernant l'architecture des projets elle n'est pas impactée par la gestion de la localisation puisque tous les projets androids suivent la même norme qui consiste a ranger les fichiers de traductions dans le répertoire "res" à la racine. La gestion des différentes langues se fait avec différents répertoires "values". Un répertoire va correspondre à une langage par exemple /res/values-de contenant un fichier "strings.xml".
 
-[INSERTION android_project.png]
+![](../assets/localisation/android_project.png)
 
 Nous pouvons voir graphique au graphique ci-dessus que la taille des projets (ici le nombre de java file servent de références) n'a pas d'incidence sur la quantité de langue traduite. On peut aussi remarquer que les projets qui sont plus petits ont une grosse quantité de langues traduites (par exemple: mini.pocket, PixelKnot, card-locker) par rapport à leur quantité de fichier java. [A REVOIR]
 
 
 Projets Java :
 
-[INSERTION java_project_graph.png]
+![](../assets/localisation/java_project_graph.png)
 
 
-[INSERTION java_project_properties_localisation.png]
+![](../assets/localisation/java_project_properties_localisation.png)
 
 
     "Android stat": {
@@ -129,11 +129,11 @@ Projets Java :
     }
 
 
-## VI. Menaces à la validité des résultats
-
+#### 2. Analyse des résultats d'analyse des commits
+ 
 Commits de localisation : 
 Lorsqu'on étudie le graphique représentant le pourcentage de commits liés à la localisation sur la branche master, on se rend rapidemment compte que le pourcentage est extrêment variable.
-[INSERTION pourcentage_commit_graph.png]
+![Figure : Pourcentage de commit lie a la localisation par projet](../assets/localisation/pourcentage_commit_graph.png)
 Si on excepte les projets n'ayant aucun commits de localisation, le plus bas est à 1%, et le plus haut est à 76%. 
 Cette disparité dans le pourcentage nous a étonné, car nous nous attendions à ce que l'automatisation avec weblate permette de garder le nombre de commits assez bas, et régulier entre différents projets.
 
@@ -143,7 +143,7 @@ Pour cela nous avons réalisé un graphique en batons avec 3 valeurs pour chaque
 - Le pourcentage maximal de commits pour ce projet (violet)
 - Le pourcentage de commits sur master (vert)
 
-[INSERTION graph_branches.png]
+![](../assets/localisation/graph_branches.png)
 
 Globalement, on observe qu'il n'y a pas de branches dédiée à la localisation, car seuls 2 projets montrent une différence notable entre le pourcentage maximal et le pourcentage moyen.
 On remarque aussi qu'un bon nombre de projet (33 / 64) ont leur pourcentage de commits sur master égal au pourcentage maximal de commits, on peut donc supposer que master est la branche dédiée à la localisation pour ces projets là.
@@ -153,9 +153,9 @@ Encore une fois, nous nous n'attendions pas à ce résulat, et nous pensions voi
 On peut toutefois remarquer que le pourcentage de commits de localisation en moyenne sur toutes les branches reste globalement assez proche du nombre de commits maximal, ce qui peut montrer qu'il n'y a pas de grande disparité entre la répartition des commits sur les branches.
 Avec ces valeurs, si on observe que la branche maximale a la même valeur que master, c'est que la localisation se concentre majoritairement sur master.
 
-Enfin, nous avons souhaité étudier la répartition des commits en fonction des auteurs : si le commit a été fait par un humain ou par Weblate. 
+Nous avons également souhaité étudier la répartition des commits en fonction des auteurs : si le commit a été fait par un humain ou par Weblate. 
 Nous avons donc réalisé un digramme en boite à moustaches du pourcentage de répartion de commits de localisation réalisé par Weblate sur tous les projets. 
-[INSERTION graph_moyenne.png]
+![](../assets/localisation/graph_moyenne.png)
 La moyenne est à 50%, le minimum est à 0% et le maximum à 95%. Cela représente donc un grand écart type. 
 
 Nous sommes encore une fois surpris d'avoir la moitié des commits de localisation réalisés par des humains, car nous attendions à un pourcentage
