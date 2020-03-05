@@ -157,7 +157,7 @@ Nous sommes encore une fois surpris d'avoir la moitié des commits de localisati
 assez faible, compte tenu de l'automatisation des commits par Weblate.
 
 
-## VI. Menaces à la validité des résultats
+## IX. Menaces à la validité des résultats
 
 Les principales menaces à la validité des résultats se situent dans nos hypothèses  et nos échantillons de départ.
 En effet, le fait de récupérer des projets open source sur Weblate peut provoquer un biais dans les résultats, car les projets open source ne fonctionnent pas de la même manière que des projets "privés".
@@ -167,6 +167,6 @@ Le problème se trouve dans le fait que ces mots clés ne sont peut être pas le
 Pour essayer de corriger ce problème, nous avons déterminé un indice de confiance. Nous avons choisi 40 commits identifiés comme commit de localisation et nous avons vérifié qu'il s'agissait bien de cela. Nous avons donc obtenu : 
 
 
-## VII. References
+## X. References
 1. ref1
 1. ref2
