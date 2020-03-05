@@ -40,12 +40,22 @@ Cette question est intéressante puisqu’elle touche à deux aspects, quelles t
     - Est-ce qu’il y a des merges dédiés ?
     - Est-ce qu’il y a des branches dédiées ? 
 
-## III. Collecte d'information
+## III. Zone de Recherche
 
-Préciser vos zones de recherches en fonction de votre projet,
+Dans le cadre de nos question nous cherchons principalement a conduire des recherches empirique sur des projets existant.
+Nous allons donc chercher a explorer des projets existant qui mettent en place de la l10n
+et extraire de ces derniers des donnée pertinente pour nos questionnements.
 
-1. les articles ou documents utiles à votre projet
-2. les outils
+Pour se faire nous nous appuierons sur des site regroupant des projets qui ont intégré de la l10n, et l'accés a leur code source, comme _Weblate_ 
+qui permet sur sa plateforme principale la traduction participative ouverte au publique. 
+
+Egalement afin d'élargir le champs de recherche nous conduirons une recherche sur Github parmis les projet java les plus populaire, afin d'estimé combien applique la l10n et obtenir un autre echantillons de statistique indépendant de l'outils _weblate_.
+
+La selection se ferat a travers du webscrapping et des requetes au api des différents site, 
+afin d'extraire des projet en java et les liens de leurs sources.
+Une fois les différents projet selectioné, nous appliquerons des scripts d'analyse détaillé en IV 
+implémenté en python. 
+
  
 ## IV. Méthodologie
 

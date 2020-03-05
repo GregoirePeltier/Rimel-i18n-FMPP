@@ -73,5 +73,6 @@ plt.title("Nombre de fichier commit lié a la localistaion dans le temps")
 plt.xlabel("Pourcentage de temps depuis le début de la localisation")
 plt.ylabel("Nombre de fichier commits par jours")
 plt.bar(counts.keys(),counts.values())
-plt.savefig("commit_lie_a_la_localisation_dans_le_temps")
+plt.savefig("commit_lie_a_la_localisation_dans_le_temps_star")
 plt.show()
+

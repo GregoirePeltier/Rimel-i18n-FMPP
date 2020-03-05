@@ -22,5 +22,5 @@ with open("./top_gits.txt") as gits:
     count = len(localized)
     print(count)
     print(localized)
-    with open("./count","w") as count:
+    with open("stared_git", "w") as count:
         count.writelines(localized)
