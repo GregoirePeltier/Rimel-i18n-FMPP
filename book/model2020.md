@@ -73,11 +73,11 @@ La première concernant la structure d'un projet :
 
 La deuxième analyse concerne la gestion de version avec : 
 - Parcourir les commits pour trouver ceux qui sont liés à la l10n grâce à des mots clefs (localisation, translation etc) [script.5]
-- Voir le nombre de fichiers impactés lors des commits liés à la localisation. Cette analyse permettra de savoir combien de commits sont liés à la localisation, et de voir quelle proportion prend la localisation sur le développement d'une application 
+- Voir le nombre de fichiers impactés lors des commits liés à la localisation. Cette analyse permettra de savoir combien de commits sont liés à la localisation, et de voir quelle proportion prend la localisation sur le développement d'une application [script.6]
 
-- Parcourir les branches pour déterminer si une branche est spécifique à la traduction [script.6]. Ces résultats montreront si une branche est spécifique à la gestion d'l10n ou non.
+- Parcourir les branches pour déterminer si une branche est spécifique à la traduction [script.7]. Ces résultats montreront si une branche est spécifique à la gestion d'l10n ou non.
 
-- Répartition des auteurs pour les commits de traduction. [script.7]. Cela permettra de savoir si les commits sont majoritairement de weblate ou de développeurs.
+- Répartition des auteurs pour les commits de traduction. [script.8]. Cela permettra de savoir si les commits sont majoritairement de weblate ou de développeurs.
 
 Toutes ces informations nous permettront d'avoir des métriques simples pour répondre à notre question "Quel est l'impact des techniques de mise en œuvre de la localisation sur les projets informatiques". 
 
@@ -150,11 +150,37 @@ Avec ces valeurs, si on observe que la branche maximale a la même valeur que ma
 
 Nous avons également souhaité étudier la répartition des commits en fonction des auteurs : si le commit a été fait par un humain ou par Weblate. 
 Nous avons donc réalisé un digramme en boite à moustaches du pourcentage de répartion de commits de localisation réalisé par Weblate sur tous les projets. 
+
 ![](../assets/localisation/graph_moyenne.png)
+
 La moyenne est à 50%, le minimum est à 0% et le maximum à 95%. Cela représente donc un grand écart type. 
 
 Nous sommes encore une fois surpris d'avoir la moitié des commits de localisation réalisés par des humains, car nous attendions à un pourcentage
 assez faible, compte tenu de l'automatisation des commits par Weblate.
+
+Enfin nous avons souhaité analyser la répartition des commits dans le temps.
+Pour cela nous avons compté le nombre de commits lié a la localisation a chaque date de chaque projet, et fait en sorte
+de normaliser les comptes sur une echelle de 0 à 100, à 0 étant le premier commits detecté, à 100 le dernier detecté.
+Cela nous donnants le graphique suivant.
+
+![](../assets/localisation/commit_lie_a_la_localisation_dans_le_temps.png)
+
+On voit donc une répartition relativement disparate après une période de tampons où les projet ne versionne pas de travail lié a la localisation. 
+Et cela que ce soit sur les projet selectioné à travers weblate ou les projets applicant la l10n parmis les 1000 plus populaire sur github 
+représenté ci dessous:
+
+![](../assets/localisation/commit_lie_a_la_localisation_dans_le_temps_star.png)
+
+Afin de chercher a exclure les phénomène ponctuelle de commit massifs qui pourrait être effectué sur certain projets
+nous avons grapher la moyenne du nombre de fichiers versioné par pourcentage de temps écoulé, a nouveau pour les deux ensembles de projets
+ ![](../assets/localisation/moyenne_commit_lie_a_la_localisation_dans_le_temps.png)
+ ![](../assets/localisation/moyenne_commit_lie_a_la_localisation_dans_le_temps_star.png)
+ 
+Nous voyons alors un nombre de commits beaucoup plus omogène au cours du temps, a nouveau quelque soit l'échantillons de projets.
+
+Nous pouvons donc voir que les projets tendent en moyenne a avoir une activité constante, cependant parsemé de grand nombre de fichiers commits d'un coup.
+Cela pouvant  
+
 
 ## VII. Conclusion 
 
@@ -168,6 +194,7 @@ Au niveau de la gestion des branches, on ne distingue pas de forte tendance à a
 
 
 ## IX. Menaces à la validité des résultats
+## VIII. Menaces à la validité des résultats
 
 Les principales menaces à la validité des résultats se situent dans nos hypothèses  et nos échantillons de départ.
 En effet, le fait de récupérer des projets open source sur Weblate peut provoquer un biais dans les résultats, car les projets open source ne fonctionnent pas de la même manière que des projets "privés".
@@ -178,6 +205,14 @@ Pour essayer de corriger ce problème, nous avons déterminé un indice de confi
 Cela est un indice de confiance élevé, nous avons donc assez confiance en nos résultats.
 
 
-## X. References
-1. ref1
-1. ref2
+## IX. References
+
+###Outils
+1. script.1 : [/weblate/projectScrapping](https://github.com/GregoirePeltier/Rimel-i18n-FMPP/tree/master/weblate/projectScrapping.py)
+2. script.2 : [/weblate/look_for_properties](https://github.com/GregoirePeltier/Rimel-i18n-FMPP/tree/master/weblate/look_for_properties.py)
+3. script.3 : [/weblate/look_for_key](https://github.com/GregoirePeltier/Rimel-i18n-FMPP/tree/master/weblate/look_for_key.py)
+4. script.4 : [/weblate/look_for_values_folders](https://github.com/GregoirePeltier/Rimel-i18n-FMPP/tree/master/weblate/look_for_values_folders.py)
+5. script.5 : [/gitStudy/git_commit](https://github.com/GregoirePeltier/Rimel-i18n-FMPP/tree/master/gitStudy/git_commit.py)
+6. script.6 : [/gitStudy/git_commit_file](https://github.com/GregoirePeltier/Rimel-i18n-FMPP/tree/master/gitStudy/git_commit_file.py)
+7. script.7 : [/gitStudy/git_branch_study](https://github.com/GregoirePeltier/Rimel-i18n-FMPP/tree/master/gitStudy/git_branch_study.py)
+8. script.8 : [/gitStudy/git_author](https://github.com/GregoirePeltier/Rimel-i18n-FMPP/tree/master/gitStudy/git_author.py)
