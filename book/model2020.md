@@ -107,6 +107,8 @@ Si nous comparons ces résultats avec la proportion de fichiers properties et fi
 
 ![](../assets/localisation/nombre_de_fichier_properties_par_top_projet.png)
 
+L'architecture des projets android ne semble pas impactée par la localisation. Cela peut s'expliquer par la norme de placement des fichiers de traduction dans le répertoire "res". En revanche, les projets Java purs semblent impactés, cela peut s'expliquer par le manque de norme. Chaque projet semble gérer ses emplacements différemment, et aucun projet place tous ses fichiers de traduction au même endroit, ce qui impacte l'architecture global.
+
 
     "Android stat": {
         "average": 14.591324874594275,
@@ -183,9 +185,7 @@ Nous pouvons donc voir que les projets tendent en moyenne à avoir une activité
 
 ## VII. Conclusion 
 
-L'architecture des projets android ne semble pas impactée par la localisation. 
-Cela peut s'expliquer par la norme de placement des fichiers de traduction dans le répertoire values. 
-En revanche les projets Java purs semblent impactés. Cela peut s'expliquer par le manque de norme [+ ajouter des trucs sur les marqueurs ça doit sûrement être liés] 
+
 
 Au niveau de la gestion des branches, on ne distingue pas de forte tendance à avoir une branche dédiée autre que master. Cette tendance peut s'expliquer par le fait que les branches seront eventuellement mergées sur master.
 ## VIII. Outils \(facultatif\)
