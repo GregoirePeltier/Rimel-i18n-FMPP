@@ -80,11 +80,11 @@ La première concernant la structure d'un projet :
 
 La deuxième analyse concerne la gestion de version avec : 
 - Parcourir les commits pour trouver ceux qui sont liés à la l10n grâce à des mots clefs (localisation, translation etc) [script.5]
-- Voir le nombre de fichiers impactés lors des commits liés à la localisation. Cette analyse permettra de savoir combien de commits sont liés à la localisation, et de voir quelle proportion prend la localisation sur le développement d'une application 
+- Voir le nombre de fichiers impactés lors des commits liés à la localisation. Cette analyse permettra de savoir combien de commits sont liés à la localisation, et de voir quelle proportion prend la localisation sur le développement d'une application [script.6]
 
-- Parcourir les branches pour déterminer si une branche est spécifique à la traduction [script.6]. Ces résultats montreront si une branche est spécifique à la gestion d'l10n ou non.
+- Parcourir les branches pour déterminer si une branche est spécifique à la traduction [script.7]. Ces résultats montreront si une branche est spécifique à la gestion d'l10n ou non.
 
-- Répartition des auteurs pour les commits de traduction. [script.7]. Cela permettra de savoir si les commits sont majoritairement de weblate ou de développeurs.
+- Répartition des auteurs pour les commits de traduction. [script.8]. Cela permettra de savoir si les commits sont majoritairement de weblate ou de développeurs.
 
 Toutes ces informations nous permettront d'avoir des métriques simples pour répondre à notre question "Quel est l'impact des techniques de mise en œuvre de la localisation sur les projets informatiques". 
 
@@ -167,11 +167,7 @@ assez faible, compte tenu de l'automatisation des commits par Weblate.
 
 L'architecture des projets android ne semble pas impactée par la localisation cela peut s'expliquer par la norme de placement des fichiers de traduction dans le repertoire values. En revanche les projets Java pures semblent impacté cela peut s'expliquer par le manque de norme [+ ajouter des trucs sur les marqueurs ça doit sûrement être liés] 
 
-## VIII. Outils \(facultatif\)
-
-
-
-## IX. Menaces à la validité des résultats
+## VIII. Menaces à la validité des résultats
 
 Les principales menaces à la validité des résultats se situent dans nos hypothèses  et nos échantillons de départ.
 En effet, le fait de récupérer des projets open source sur Weblate peut provoquer un biais dans les résultats, car les projets open source ne fonctionnent pas de la même manière que des projets "privés".
@@ -182,6 +178,14 @@ Pour essayer de corriger ce problème, nous avons déterminé un indice de confi
 Cela est un indice de confiance élevé, nous avons donc assez confiance en nos résultats.
 
 
-## X. References
-1. ref1
-1. ref2
+## IX. References
+
+###Outils
+1. script.1 : [/weblate/projectScrapping]()
+2. script.2 : [/weblate/look_for_properties]()
+3. script.3 : [/weblate/look_for_key]()
+4. script.4 : [/weblate/look_for_values_folders]()
+5. script.5 : [/gitStudy/git_commit]()
+6. script.6 : [/gitStudy/git_commit_file]()
+7. script.7 : [/gitStudy/git_branch_study]()
+8. script.8 : [/gitStudy/git_author]()
