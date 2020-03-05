@@ -108,11 +108,11 @@ Nous pouvons voir graphique au graphique ci-dessus que la taille des projets (ic
 Projets Java :
 Concernant les projets Java nous pouvons constater que la localisation des fichiers liés à la l10n sont rangés dans différents répertoires. Pour certains projets tel que "Jenkins" et "che", les properties sont séparés dans plus de 250 répertoires. Pour la majorité des projets analysés ces fichiers sont distribués dans moins de 50 répertoires.
 
-![](../assets/localisation/java_project_graph.png)
+![](../assets/localisation/repertoires_contenant_des_properties_par_top_projet.png)
 
 Si nous comparons ces résultats avec la proportion de fichiers properties et fichiers java, nous pouvons constater une corrélation entre les deux. Effectivement, les projets ayant peu de fichiers properties correspondant à la traduction sont ceux qui ont le moins de répertoire les contenant. Si nous reprenons l'exemple de "Jenkins", on voit qu'il y a plus de fichiers properties de traduction que de fichier java et que cela a un impact sur l'architecture du projet, puisque ces fichiers properties sont contenus dans plus de 250 répertoires. De même pour le projet "che", même si la quantité de traduction est moins élevé que "Jenkins", cela semble toujours avoir un impact sur l'architecture, puisque les fichiers liés à localisation sont contenus dans plus de 400 répertoires. Cette corrélation est aussi visible pour les projets "spring-petclinic", "ddsample-core" et "pentaho-kettle".
 
-![](../assets/localisation/java_project_properties_localisation.png)
+![](../assets/localisation/nombre_de_fichier_properties_par_top_projet.png)
 
 
     "Android stat": {
