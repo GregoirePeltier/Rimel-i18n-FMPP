@@ -157,7 +157,7 @@ assez faible, compte tenu de l'automatisation des commits par Weblate.
 
 
 
-## VI. Menaces à la validité des résultats
+## IX. Menaces à la validité des résultats
 
 Les principales menaces à la validité des résultats se situent dans nos hypothèses  et nos échantillons de départ.
 En effet, le fait de récupérer des projets open source sur Weblate peut provoquer un biais dans les résultats, car les projets open source ne fonctionnent pas de la même manière que des projets "privés".
@@ -168,6 +168,6 @@ Pour essayer de corriger ce problème, nous avons déterminé un indice de confi
 Cela est un indice de confiance élevé, nous avons donc assez confiance en nos résultats.
 
 
-## VII. References
+## X. References
 1. ref1
 1. ref2
