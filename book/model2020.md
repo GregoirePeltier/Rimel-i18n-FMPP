@@ -157,11 +157,37 @@ Avec ces valeurs, si on observe que la branche maximale a la même valeur que ma
 
 Nous avons également souhaité étudier la répartition des commits en fonction des auteurs : si le commit a été fait par un humain ou par Weblate. 
 Nous avons donc réalisé un digramme en boite à moustaches du pourcentage de répartion de commits de localisation réalisé par Weblate sur tous les projets. 
+
 ![](../assets/localisation/graph_moyenne.png)
+
 La moyenne est à 50%, le minimum est à 0% et le maximum à 95%. Cela représente donc un grand écart type. 
 
 Nous sommes encore une fois surpris d'avoir la moitié des commits de localisation réalisés par des humains, car nous attendions à un pourcentage
 assez faible, compte tenu de l'automatisation des commits par Weblate.
+
+Enfin nous avons souhaité analyser la répartition des commits dans le temps.
+Pour cela nous avons compté le nombre de commits lié a la localisation a chaque date de chaque projet, et fait en sorte
+de normaliser les comptes sur une echelle de 0 à 100, à 0 étant le premier commits detecté, à 100 le dernier detecté.
+Cela nous donnants le graphique suivant.
+
+![](../assets/localisation/commit_lie_a_la_localisation_dans_le_temps.png)
+
+On voit donc une répartition relativement disparate après une période de tampons où les projet ne versionne pas de travail lié a la localisation. 
+Et cela que ce soit sur les projet selectioné à travers weblate ou les projets applicant la l10n parmis les 1000 plus populaire sur github 
+représenté ci dessous:
+
+![](../assets/localisation/commit_lie_a_la_localisation_dans_le_temps_star.png)
+
+Afin de chercher a exclure les phénomène ponctuelle de commit massifs qui pourrait être effectué sur certain projets
+nous avons grapher la moyenne du nombre de fichiers versioné par pourcentage de temps écoulé, a nouveau pour les deux ensembles de projets
+ ![](../assets/localisation/moyenne_commit_lie_a_la_localisation_dans_le_temps.png)
+ ![](../assets/localisation/moyenne_commit_lie_a_la_localisation_dans_le_temps_star.png)
+ 
+Nous voyons alors un nombre de commits beaucoup plus omogène au cours du temps, a nouveau quelque soit l'échantillons de projets.
+
+Nous pouvons donc voir que les projets tendent en moyenne a avoir une activité constante, cependant parsemé de grand nombre de fichiers commits d'un coup.
+Cela pouvant  
+
 
 ## VII. Conclusion 
 

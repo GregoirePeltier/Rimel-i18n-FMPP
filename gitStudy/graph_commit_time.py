@@ -27,7 +27,7 @@ def parseDate(text):
 
 def parse():
     repositories = dict()
-    with open("./output/edition_dates_stared.txt") as dates_file:
+    with open("./output/edition_dates.txt") as dates_file:
         currentRepo = dict()
         currentFile = None
         for line in dates_file:
@@ -69,10 +69,10 @@ for rep in tqdm(repositories,desc="Counting"):
     counts.update(rep_counts)
 counts = {key:counts[key] for key in tqdm(counts,desc="Filtering") if counts[key]<1000}
 
-plt.title("Nombre de fichiers commit lié à la localisation dans le temps")
+plt.title("Nombre de fichiers commit liés à la localisation dans le temps")
 plt.xlabel("Pourcentage de temps depuis le début de la localisation")
-plt.ylabel("Nombre de fichier commits par jours")
+plt.ylabel("Nombre de fichiers commits par jour")
 plt.bar(counts.keys(),counts.values())
-plt.savefig("commit_lie_a_la_localisation_dans_le_temps_star")
+plt.savefig("commit_lie_a_la_localisation_dans_le_temps")
 plt.show()
 

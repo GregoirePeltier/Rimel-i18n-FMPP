@@ -30,7 +30,7 @@ def parseDate(text):
 
 def parse():
     repositories = dict()
-    with open("./output/edition_dates_stared.txt") as dates_file:
+    with open("./output/edition_dates.txt") as dates_file:
         currentRepo = dict()
         currentFile = None
         for line in dates_file:
@@ -82,10 +82,10 @@ for i in tqdm(range(101)):
 
 # counts = {key:counts[key] for key in tqdm(counts,desc="Filtering") if counts[key]<1000}
 counts = mean_counts
-plt.title("Nombre moyen de fichier commit lié a la localisation dans le temps")
+plt.title("Nombre moyen de fichiers commit lié a la localisation dans le temps ")
 plt.xlabel("Pourcentage de temps depuis le début de la localisation")
-plt.ylabel("Nombre de fichier moyen commits par pourcent")
+plt.ylabel("Nombre moyen de fichiers commits par pourcent")
 plt.bar(counts.keys(),counts.values())
-plt.savefig("moyenne_commit_lie_a_la_localisation_dans_le_temps_star")
+plt.savefig("moyenne_commit_lie_a_la_localisation_dans_le_temps")
 plt.show()
 
