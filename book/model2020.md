@@ -88,7 +88,7 @@ Chaque membre de l'équipe a créé des scripts et des graphiques.
 1. Analyse des résultats concernant l'architecture des projets
 
 Projets Android :
-Concernant l'architecture des projets elle n'est pas impactés par la gestion de la localisation puisque tous les projets androids suivent la même norme qui consiste a ranger les fichiers de traductions dans le répertoire "res" à la racine. La gestion des différentes langues se fait avec différents répertoires "values". Un répertoire va correspondre à une langage par exemple /res/values-de contenant un fichier "strings.xml".
+Concernant l'architecture des projets elle n'est pas impactée par la gestion de la localisation puisque tous les projets androids suivent la même norme qui consiste a ranger les fichiers de traductions dans le répertoire "res" à la racine. La gestion des différentes langues se fait avec différents répertoires "values". Un répertoire va correspondre à une langage par exemple /res/values-de contenant un fichier "strings.xml".
 
 [INSERTION android_project.png]
 
@@ -118,17 +118,55 @@ Projets Java :
         "totalNbOccurrence": 3686
     }
 
+
 ## VI. Menaces à la validité des résultats
+
+Commits de localisation : 
+Lorsqu'on étudie le graphique représentant le pourcentage de commits liés à la localisation sur la branche master, on se rend rapidemment compte que le pourcentage est extrêment variable.
+[INSERTION pourcentage_commit_graph.png]
+Si on excepte les projets n'ayant aucun commits de localisation, le plus bas est à 1%, et le plus haut est à 76%. 
+Cette disparité dans le pourcentage nous a étonné, car nous nous attendions à ce que l'automatisation avec weblate permette de garder le nombre de commits assez bas, et régulier entre différents projets.
+
+La question s'est ensuite posée de savoir si une branche en particulier était dédiée à la localisation. 
+Pour cela nous avons réalisé un graphique en batons avec 3 valeurs pour chaque projet :
+- Le pourcentage moyen de commits sur toutes les branches (bleu clair)
+- Le pourcentage maximal de commits pour ce projet (violet)
+- Le pourcentage de commits sur master (vert)
+
+[INSERTION graph_branches.png]
+
+Globalement, on observe qu'il n'y a pas de branches dédiée à la localisation, car seuls 2 projets montrent une différence notable entre le pourcentage maximal et le pourcentage moyen.
+On remarque aussi qu'un bon nombre de projet (33 / 64) ont leur pourcentage de commits sur master égal au pourcentage maximal de commits, on peut donc supposer que master est la branche dédiée à la localisation pour ces projets là.
+
+Encore une fois, nous nous n'attendions pas à ce résulat, et nous pensions voir beaucoup plus de projets possédant une branche de localisation dédiée autre que master. 
+
+On peut toutefois remarquer que le pourcentage de commits de localisation en moyenne sur toutes les branches reste globalement assez proche du nombre de commits maximal, ce qui peut montrer qu'il n'y a pas de grande disparité entre la répartition des commits sur les branches.
 
 
 ## VII. Conclusion 
 
 ## VIII. Outils \(facultatif\)
-Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à 
-\(1\) pouvoir reproduire vos expériementations, 
-\(2\) partager/expliquer à d'autres l'usage des outils.
+Avec ces valeurs, si on observe que la branche maximale a la même valeur que master, c'est que la localisation se concentre majoritairement sur master.
 
-## IX. References
+Enfin, nous avons souhaité étudier la répartition des commits en fonction des auteurs : si le commit a été fait par un humain ou par Weblate. 
+Nous avons donc réalisé un digramme en boite à moustaches du pourcentage de répartion de commits de localisation réalisé par Weblate sur tous les projets. 
+[INSERTION graph_moyenne.png]
+La moyenne est à 50%, le minimum est à 0% et le maximum à 95%. Cela représente donc un grand écart type. 
 
+Nous sommes encore une fois surpris d'avoir la moitié des commits de localisation réalisés par des humains, car nous attendions à un pourcentage
+assez faible, compte tenu de l'automatisation des commits par Weblate.
+
+
+## VI. Menaces à la validité des résultats
+
+Les principales menaces à la validité des résultats se situent dans nos hypothèses  et nos échantillons de départ.
+En effet, le fait de récupérer des projets open source sur Weblate peut provoquer un biais dans les résultats, car les projets open source ne fonctionnent pas de la même manière que des projets "privés".
+
+De plus, pour déterminer les commits à la localisation nous utilisons des mots-clés ["localization", "l10n", "i18n", "internationalization", "translate", "translation", "weblate"]
+Le problème se trouve dans le fait que ces mots clés ne sont peut être pas les bons, et qu'ils peuvent peut être inclure d'autres commits.
+Pour essayer de corriger ce problème, nous avons déterminé un indice de confiance. Nous avons choisi 40 commits identifiés comme commit de localisation et nous avons vérifié qu'il s'agissait bien de cela. Nous avons donc obtenu : 
+
+
+## VII. References
 1. ref1
 1. ref2

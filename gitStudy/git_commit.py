@@ -1,12 +1,11 @@
 # Source https://gist.github.com/simonw/091b765a071d1558464371042db3b959
 # Modified by prune.pillone@etu.unice.fr
 
-## peut etre unterressant de voir qui commit
-
 import subprocess
 import re
 import os
 import sys
+import random
 
 leading_4_spaces = re.compile('^    ')
 
@@ -21,23 +20,26 @@ def getName():
 
 
 def run():
-    outputFile = open("./output/output.txt", 'w')
+    outputFile = open("./output/output_confiance.txt", 'w')
     for f in os.walk("../Projects"):
         for folder in f[1]:
             os.chdir("../Projects/" + folder)
             commits = get_commits()
             total = 0
             totalLoc = 0
+            nbCommitTest = 0
             for commit in commits:
                 total += 1
                 # print(commit['title'])  print(commit['message']) print(commit['hash'])
                 found = 0
                 for word in keywords:
                     if found == 0 and (word in commit['message'] or word in commit['title']):
-                        get_Files(commit, outputFile)
+                        if random.randint(0, 10) == 7 and nbCommitTest < 10:
+                            nbCommitTest += 1
+                            outputFile.write(getName() + " " + commit['hash'] + "\n")
                         totalLoc += 1
                         found = 1
-            outputFile.write(getName() + " = " + str(totalLoc) + "/" + str(total) + "\n")
+            #outputFile.write(getName() + " = " + str(totalLoc) + "/" + str(total) + "\n")
             os.chdir("..")
     outputFile.close()
 
