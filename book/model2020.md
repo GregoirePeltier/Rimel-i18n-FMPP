@@ -102,13 +102,15 @@ Concernant l'architecture des projets elle n'est pas impactée par la gestion de
 
 ![](../assets/localisation/android_project.png)
 
-Nous pouvons voir graphique au graphique ci-dessus que la taille des projets (ici le nombre de java file servent de références) n'a pas d'incidence sur la quantité de langue traduite. On peut aussi remarquer que les projets qui sont plus petits ont une grosse quantité de langues traduites (par exemple: mini.pocket, PixelKnot, card-locker) par rapport à leur quantité de fichier java. [A REVOIR]
+Nous pouvons voir graphique au graphique ci-dessus que la taille des projets (ici le nombre de java file servent de références) n'a pas d'incidence sur la quantité de langue traduite. On peut aussi remarquer que les projets qui sont plus petits ont une grosse quantité de langues traduites (par exemple: mini.pocket, PixelKnot, card-locker) par rapport à leur quantité de fichier java.
 
 
 Projets Java :
+Concernant les projets Java nous pouvons constater que la localisation des fichiers liés à la l10n sont rangés dans différents répertoires. Pour certains projets tel que "Jenkins" et "che", les properties sont séparés dans plus de 250 répertoires. Pour la majorité des projets analysés ces fichiers sont distribués dans moins de 50 répertoires.
 
 ![](../assets/localisation/java_project_graph.png)
 
+Si nous comparons ces résultats avec la proportion de fichiers properties et fichiers java, nous pouvons constater une corrélation entre les deux. Effectivement, les projets ayant peu de fichiers properties correspondant à la traduction sont ceux qui ont le moins de répertoire les contenant. Si nous reprenons l'exemple de "Jenkins", on voit qu'il y a plus de fichiers properties de traduction que de fichier java et que cela a un impact sur l'architecture du projet, puisque ces fichiers properties sont contenus dans plus de 250 répertoires. De même pour le projet "che", même si la quantité de traduction est moins élevé que "Jenkins", cela semble toujours avoir un impact sur l'architecture, puisque les fichiers liés à localisation sont contenus dans plus de 400 répertoires. Cette corrélation est aussi visible pour les projets "spring-petclinic", "ddsample-core" et "pentaho-kettle".
 
 ![](../assets/localisation/java_project_properties_localisation.png)
 
@@ -162,6 +164,8 @@ Nous sommes encore une fois surpris d'avoir la moitié des commits de localisati
 assez faible, compte tenu de l'automatisation des commits par Weblate.
 
 ## VII. Conclusion 
+
+L'architecture des projets android ne semble pas impactée par la localisation cela peut s'expliquer par la norme de placement des fichiers de traduction dans le repertoire values. En revanche les projets Java pures semblent impacté cela peut s'expliquer par le manque de norme [+ ajouter des trucs sur les marqueurs ça doit sûrement être liés] 
 
 ## VIII. Outils \(facultatif\)
 
