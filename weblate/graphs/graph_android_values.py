@@ -31,8 +31,9 @@ p1 = plt.bar(ind, tuple(javaFiles), width)
 p2 = plt.bar(ind, tuple(valuesFolder), width, bottom=tuple(javaFiles))
 
 plt.ylabel('Nombre de fichier')
-plt.title('')
+plt.title('Quantité de fichiers de traductions sur la quantité de fichiers java pour les projets android')
 plt.xticks(ind, tuple(names), rotation='vertical')
 plt.legend((p1[0], p2[0]), ('Java File', 'Values files'))
+plt.savefig("android_project", bbox_inches="tight")
 
 plt.show()
