@@ -181,11 +181,11 @@ Cela est un indice de confiance élevé, nous avons donc assez confiance en nos 
 ## IX. References
 
 ###Outils
-1. script.1 : [/weblate/projectScrapping]()
-2. script.2 : [/weblate/look_for_properties]()
-3. script.3 : [/weblate/look_for_key]()
-4. script.4 : [/weblate/look_for_values_folders]()
-5. script.5 : [/gitStudy/git_commit]()
-6. script.6 : [/gitStudy/git_commit_file]()
-7. script.7 : [/gitStudy/git_branch_study]()
-8. script.8 : [/gitStudy/git_author]()
+1. script.1 : [/weblate/projectScrapping](https://github.com/GregoirePeltier/Rimel-i18n-FMPP/tree/master/weblate/projectScrapping.py)
+2. script.2 : [/weblate/look_for_properties](https://github.com/GregoirePeltier/Rimel-i18n-FMPP/tree/master/weblate/look_for_properties.py)
+3. script.3 : [/weblate/look_for_key](https://github.com/GregoirePeltier/Rimel-i18n-FMPP/tree/master/weblate/look_for_key.py)
+4. script.4 : [/weblate/look_for_values_folders](https://github.com/GregoirePeltier/Rimel-i18n-FMPP/tree/master/weblate/look_for_values_folders.py)
+5. script.5 : [/gitStudy/git_commit](https://github.com/GregoirePeltier/Rimel-i18n-FMPP/tree/master/gitStudy/git_commit.py)
+6. script.6 : [/gitStudy/git_commit_file](https://github.com/GregoirePeltier/Rimel-i18n-FMPP/tree/master/gitStudy/git_commit_file.py)
+7. script.7 : [/gitStudy/git_branch_study](https://github.com/GregoirePeltier/Rimel-i18n-FMPP/tree/master/gitStudy/git_branch_study.py)
+8. script.8 : [/gitStudy/git_author](https://github.com/GregoirePeltier/Rimel-i18n-FMPP/tree/master/gitStudy/git_author.py)
