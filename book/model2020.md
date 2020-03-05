@@ -1,25 +1,6 @@
----
-layout: default
-title : Modèle de chapitre pour 2020
-date:   2020-01-03 22:00:00 +0100
----
+## Auteurs
 
----
-
-> **Date de rendu finale : Mars 2020 au plus tard**
-> - Respecter la structure pour que les chapitres soient bien indépendants
-> - Remarques :
->>    - Les titres peuvent changer pour etre en adéquation avec votre étude.
->>    - De même il est possible de modifier la structure, celle qui est proposée ici est là pour vous aider.
->>    - Utiliser des références pour justifier votre argumentaire, vos choix etc.
-
----
-
-**_janvier 2020_**
-
-## Authors
-
-We are four students in last year of Polytech' Nice-Sophia specialized in Software Architecture :
+Nous sommes quatre étudiants en dernière année à Polytech Nice Sophia :
 
 - prune.pillone@etu.unice.fr
 - gregoire.peltier@etu.unice.fr
@@ -59,7 +40,7 @@ Cette question est intéressante puisqu’elle touche à deux aspects, quelles t
     - Est-ce qu’il y a des merges dédiés ?
     - Est-ce qu’il y a des branches dédiées ? 
 
-## III. information gathering
+## III. Collecte d'information
 
 Préciser vos zones de recherches en fonction de votre projet,
 
@@ -104,8 +85,6 @@ Chaque membre de l'équipe a créé des scripts et des graphiques.
 
 ## V. Analyse des résultats
 
-1. Analyse des résultats & construction d’une conclusion : Une fois votre expérience terminée, vous récupérez vos mesures et vous les analysez pour voir si votre hypothèse tient la route. 
-
 1. Analyse des résultats concernant l'architecture des projets
 
 Projets Android :
@@ -139,18 +118,17 @@ Projets Java :
         "totalNbOccurrence": 3686
     }
 
-## VI. Conclusion 
+## VI. Menaces à la validité des résultats
 
 
+## VII. Conclusion 
 
-## VII. Outils \(facultatif\)
+## VIII. Outils \(facultatif\)
 Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à 
 \(1\) pouvoir reproduire vos expériementations, 
 \(2\) partager/expliquer à d'autres l'usage des outils.
 
-## VI. Menaces à la validité des résultats
-
-## VII. References
+## IX. References
 
 1. ref1
 1. ref2
