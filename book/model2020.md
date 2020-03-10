@@ -95,11 +95,11 @@ Concernant l'architecture des projets elle n'est pas impactée par la gestion de
 
 ![](../assets/localisation/android_project.png)
 
-Nous pouvons voir graphique au graphique ci-dessus que la taille des projets (ici le nombre de java file servent de références) n'a pas d'incidence sur la quantité de langue traduite. On peut aussi remarquer que les projets qui sont plus petits ont une grosse quantité de langues traduites (par exemple: mini.pocket, PixelKnot, card-locker) par rapport à leur quantité de fichier java.
+Nous pouvons voir grace au graphique ci-dessus que la taille des projets (ici le nombre de java file sert de références) n'a pas d'incidence sur la quantité de langue traduite. On peut aussi remarquer que les projets qui sont plus petits ont une grosse quantité de langues traduites (par exemple: mini.pocket, PixelKnot, card-locker) par rapport à leur quantité de fichiers java.
 
 
 Projets Java :
-Concernant les projets Java nous pouvons constater que la localisation des fichiers liés à la l10n sont rangés dans différents répertoires. Pour certains projets tel que "Jenkins" et "che", les properties sont séparés dans plus de 250 répertoires. Pour la majorité des projets analysés ces fichiers sont distribués dans moins de 50 répertoires.
+Concernant les projets Java nous pouvons constater que la localisation des fichiers liés à la l10n est dispatchée dans différents répertoires. Pour certains projets tel que "Jenkins" et "che", les properties sont séparées dans plus de 250 répertoires. Pour la majorité des projets analysés ces fichiers sont distribués dans moins de 50 répertoires.
 
 ![](../assets/localisation/repertoires_contenant_des_properties_par_top_projet.png)
 
@@ -169,7 +169,7 @@ Nous pouvons donc voir que les projets tendent en moyenne à avoir une activité
 
 #### 3. Analyse des résultats concernant les marqueurs de traduction
 
-Après avoir vu l'analyse des commits liés à la localisation, nous allons regarder les résultats de l'analyse dans le code pour voir les marqueurs qui font référence aux clés présente dans des fichiers properties pour récuperer la valeur associée a cete clé.
+Après avoir vu l'analyse des commits liés à la localisation, nous allons regarder les résultats de l'analyse dans le code pour voir les marqueurs qui font référence aux clés présentes dans des fichiers properties pour récuperer la valeur associée a cete clé.
 
 Voici ci-dessous les résultats obtenus séparés en deux parties, les projets Android et les projets Java/JSP car les façons de rechercher les marqueurs étaient radicalement différentes.
 
@@ -192,22 +192,21 @@ Voici ci-dessous les résultats obtenus séparés en deux parties, les projets A
 }
 ```
 
-On peut observer tout d'abord que la présence des marqueurs de traduction sont plus présents en moyenne dans les fichiers des projets Android que dans les fichiers Java. Meme si globalement, les projets Java ont environ plus de fichier Java/JSP que les projets Android.
-Les projets Androids ont aussi plus de marqueur que les projets Java, cela peut s'expliquer par la facilité d'implementation de la localisation qui est supporté par le framework Android.
+On peut observer tout d'abord que la présence des marqueurs de traduction est plus forte en moyenne dans les fichiers des projets Android que dans les fichiers Java. Meme si globalement, les projets Java ont plus de fichiers Java/JSP que les projets Android.
+Les projets Androids ont aussi plus de marqueurs que les projets Java, cela peut s'expliquer par la facilité d'implementation de la localisation qui est supportée par le framework Android.
 Mais on voit par contre, dans les projets Java, qu'il y a, en moyenne, dans les fichiers, plus de marqueurs. 
 
 
-Donc dans le cas d'un changement de clé dans les fichiers properties, il vas y avoir plus de fichiers à modifié dans les projets Android, mais moins d'appel de marqueur par fichier que dans les projets Java.
+Donc dans le cas d'un changement de clé dans les fichiers properties, il va y avoir plus de fichiers à modifier dans les projets Android, mais moins d'appels de marqueurs par fichier que dans les projets Java.
 
 
-Par contre, on remarque une grosse différence pour le nombre moyen d'occurence de marqueur par projets, et les projets Java ont en moyenne 900 occurences contrairement au projets Android qui en ont 100.
-On peut donc constater que les projets Java qui font de la localisation 
+Par contre, on remarque une grosse différence pour le nombre moyen d'occurences de marqueurs par projets, et les projets Java ont en moyenne 900 occurences contrairement au projets Android qui en ont 100.
 
 ![](../assets/localisation/marqueur_par_projet.png)
 
-Sur ce graphique, on peut distanguer que chaque projet est différent, certain projets ont jusqu'a 50% de fichiers avec des marqueurs et certain projets qui en ont environ 0%. 
+Sur ce graphique, on peut distinguer que chaque projet est différent, certains projets ont jusqu'à 50% de fichiers avec des marqueurs et certains projets en ont environ 0%. 
 
-Pour résumer, les résultat sur l'analyse des marqueurs, on observe que dans les projets Android et Java, l'impact qu'apporte un changement sur les clés de traductions est en moyenne a modifié 14.5% des fichiers dans les projets Android contre 9.5% dans les projets Java. Mais quand on regarde cas par cas, le total de fichiers avec des marqueurs est extremenet variable.
+Pour résumer les résultats sur l'analyse des marqueurs, on observe que dans les projets Android et Java, l'impact qu'apporte un changement sur les clés de traductions a modifié en moyenne 14.5% des fichiers dans les projets Android contre 9.5% dans les projets Java. Mais quand on regarde cas par cas, le total de fichiers avec des marqueurs est extrêment variable, et ces observations sont donc à nuancer.
 
 ## VII. Conclusion 
 Rappelons les questions posées au début : 
